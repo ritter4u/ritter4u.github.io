@@ -4,6 +4,7 @@ title: "Quick kramdown demo"
 description: "A quick demo post to some kramdown features."
 categories: [demo]
 tags: [demo, jekyll]
+published : false
 redirect_from:
   - /2017/05/25/
 ---
