@@ -11,6 +11,8 @@ theme = ["myclarity", "hugo-clarity"]
 disqusShortname = ""
 
 DefaultContentLanguage = "en"
+disableLanguages = ["pt"]
+
 # [languages]
 # config/_default/languages.toml
 
