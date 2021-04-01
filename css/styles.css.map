@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "styles.css",
-	"sourceRoot": "/Users/krpark/hugoapp",
+	"sourceRoot": "/Users/krpark/ritter4u.github.io",
 	"sources": [
 		"themes/myclarity/assets/sass/main.sass",
 		"themes/myclarity/assets/sass/_variables.sass",
