@@ -40,9 +40,10 @@ https://themes.gohugo.io/
 [Github Actions에서 사용할 Token만들기](https://zeddios.tistory.com/1047)
 
 # Action 확인 
-https://github.com/ritter4u/ritter4u.github.io/actions
+![action log](/images/guthub_action_log.png)
+<!-- https://github.com/ritter4u/ritter4u.github.io/actions -->
 
-#라이브에서 확인
-ritter4u.github.io
+# 라이브에서 확인
+[](ritter4u.github.io)
 
 
