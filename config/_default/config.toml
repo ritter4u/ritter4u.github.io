@@ -8,6 +8,8 @@ copyright = "Copyright © 2008–2018, Steve Francia and the Hugo Authors; all r
 paginate = 10
 #theme = "hugo-clarity"
 theme = ["myclarity", "hugo-clarity"]
+#theme = "hugo-flex"
+#theme = "bootstrap-bp-hugo-theme"
 disqusShortname = ""
 
 DefaultContentLanguage = "en"
