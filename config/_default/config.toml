@@ -10,6 +10,7 @@ paginate = 10
 theme = ["myclarity", "hugo-clarity"]
 #theme = "hugo-flex"
 #theme = "bootstrap-bp-hugo-theme"
+#theme = "minimal-bootstrap-hugo-theme"
 disqusShortname = ""
 
 DefaultContentLanguage = "en"
