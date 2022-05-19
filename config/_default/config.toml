@@ -10,8 +10,8 @@ paginate = 10
 #theme = "hugo-flex"
 #theme = "bootstrap-bp-hugo-theme"
 #theme = "minimal-bootstrap-hugo-theme"
-theme = "hugo-theme-monochrome"
-#theme = ["monochrome", "hugo-theme-monochrome"]
+#theme = "hugo-theme-monochrome"
+theme = ["monochrome", "hugo-theme-monochrome"]
 
 disqusShortname = ""
 
