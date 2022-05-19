@@ -7,10 +7,12 @@ copyright = "Copyright © 2008–2018, Steve Francia and the Hugo Authors; all r
 # canonifyurls = true
 paginate = 10
 #theme = "hugo-clarity"
-theme = ["minimal-bootstrap", "minimal-bootstrap-hugo-theme"]
 #theme = "hugo-flex"
 #theme = "bootstrap-bp-hugo-theme"
 #theme = "minimal-bootstrap-hugo-theme"
+#theme = "hugo-theme-monochrome"
+theme = ["monochrome", "hugo-theme-monochrome"]
+
 disqusShortname = ""
 
 DefaultContentLanguage = "en"
