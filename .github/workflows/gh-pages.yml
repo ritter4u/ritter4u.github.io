@@ -19,10 +19,9 @@ jobs:
         with:
           hugo-version: 'latest'
           extended: true
-          CGO_ENABLED : 1
 
       - name: Build
-        run: hugo --minify --tags extended
+        run: hugo --minify
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
