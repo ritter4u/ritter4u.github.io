@@ -1,13 +1,14 @@
 # set `baseurl` to your root domain
 # if you set it to "/" share icons won't work properly on production
-baseurl = "https://ritter4u.github.io/"  # Include trailing slash
-title = "Clarity"
-author = "Jane Doe"
-copyright = "Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved."
+author = "Jane Doe" 
+baseurl = "https://ritter4u.github.io/" # Include trailing slash
+copyright = "Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved." 
+title = "Clarity" 
 # canonifyurls = true
 paginate = 10
 #theme = "hugo-clarity"
-theme = ["myclarity", "hugo-clarity"]
+theme = "anatole"
+#theme = ["myclarity", "hugo-clarity"]
 #theme = "hugo-flex"
 #theme = "bootstrap-bp-hugo-theme"
 #theme = "minimal-bootstrap-hugo-theme"
@@ -24,5 +25,5 @@ disableLanguages = ["pt"]
 
 [taxonomies]
 category = "categories"
-tag = "tags"
 series = "series"
+tag = "tags"
