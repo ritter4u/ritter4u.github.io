@@ -3,14 +3,19 @@ author = "Hugo Authors"
 title = "Github as Comments"
 date = "2022-09-18"
 description = ""
-draft = true
+type = "post"
+layout = "post"
+draft = false
 tags = [
     "github",
 ]
 +++
+
 https://ansohxxn.github.io/blog/utterances/
 
-''' html
+
+
+``` html
 <script src="https://utteranc.es/client.js"
         repo="ritter4u/comments"
         issue-term="pathname"
@@ -18,4 +23,4 @@ https://ansohxxn.github.io/blog/utterances/
         crossorigin="anonymous"
         async>
 </script>
-'''
+```

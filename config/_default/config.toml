@@ -7,7 +7,7 @@ title = "Clarity"
 # canonifyurls = true
 paginate = 10
 #theme = "hugo-clarity"
-theme = "anatole"
+theme = ["my-anatole", "anatole"]
 #theme = ["myclarity", "hugo-clarity"]
 #theme = "hugo-flex"
 #theme = "bootstrap-bp-hugo-theme"
@@ -27,3 +27,8 @@ disableLanguages = ["pt"]
 category = "categories"
 series = "series"
 tag = "tags"
+
+[extra.comment.utterances]
+issue_term = "commant"
+repo = "ritter4u/commants"
+theme = "github-light"
