@@ -1,15 +1,12 @@
-+++
-author = "Hugo Authors"
-title = "Github as Comments"
-date = "2022-09-18"
-description = ""
-type = "post"
-layout = "post"
-draft = false
-tags = [
-    "github",
-]
-+++
+---
+title: "Github as Comments"
+date: 2022-09-18T23:33:40+09:00
+type: "post"
+layout : "post"
+tags : ["github"]
+description : ""
+author : "Hugo Authors"
+---
 
 https://ansohxxn.github.io/blog/utterances/
 
