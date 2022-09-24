@@ -6,6 +6,7 @@ categories: [blog]
 tags: [blog]
 draft: true
 publishdate : 2022-09-16
+draft = true
 ---
 /etc/wsl.conf
 ''' conf
