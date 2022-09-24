@@ -3,11 +3,11 @@ title = "I'm KrPark"
 author = "Keunreol Park"
 #copyright = "2020-2021"
 #description = "Call me Jane"
-profilePicture = "images/profile.jpg"
+profilePicture = "images/Imperial_Seal_of_the_Korean_Empire.svg"
 keywords = ""
 favicon = "favicons/"
 # example ["css/custom.css"]
-customCss = []
+customCss = ["css/custom.css"]
 # example ["js/custom.js"]
 customJs = [] 
 mainSections = ["post"]
