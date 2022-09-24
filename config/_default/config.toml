@@ -1,34 +1,48 @@
-# set `baseurl` to your root domain
-# if you set it to "/" share icons won't work properly on production
-author = "Keunreol Park" 
-baseurl = "https://ritter4u.github.io/" # Include trailing slash
-copyright = "Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved." 
-title = "Clarity" 
-# canonifyurls = true
-paginate = 10
-#theme = "hugo-clarity"
+baseURL = "https://ritter4u.github.io"
+languageCode = "ko"
+DefaultContentLanguage = "ko"
+title = "Website of Jane Doe"
+
+# theme as hugo module
+#theme = "github.com/lxndrblz/anatole"
+# theme as git submodule
 theme = ["my-anatole", "anatole"]
-#theme = ["myclarity", "hugo-clarity"]
-#theme = "hugo-flex"
-#theme = "bootstrap-bp-hugo-theme"
-#theme = "minimal-bootstrap-hugo-theme"
-disqusShortname = ""
 
-DefaultContentLanguage = "en"
-disableLanguages = ["pt"]
+summarylength = 10
+enableEmoji = true
+enableRobotsTXT = true
 
-# [languages]
-# config/_default/languages.toml
+# Enable Disqus
+#disqusShortname = ""
 
-# [menus]
-# config/_default/menus/menu.xx.toml
+# Google Analytics
+#googleAnalytics = "UA-123-45"
+
+# Syntax highlighting
+pygmentsUseClasses = true   
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+
+# Localized dates requires Hugo version 0.87.0
+localizedDates = false
+
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+        unsafe=true
 
 [taxonomies]
-category = "categories"
-series = "series"
-tag = "tags"
+    category = "categories"
+    series = "series"
+    tag = "tags"
 
-[extra.comment.utterances]
-issue_term = "commant"
-repo = "ritter4u/commants"
-theme = "github-light"
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = true
+[[related.indices]]
+  name = 'keywords'
+  weight = 100
+[[related.indices]]
+  name = 'tags'
+  weight = 80
