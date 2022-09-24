@@ -10,11 +10,11 @@
   identifier = "posts"
   url = "/post/"
 
-  [[main]]
-  name = "Portfolio"
-  weight = 300
-  identifier = "portfolio"
-  url = "/portfolio/"
+  # [[main]]
+  # name = "Portfolio"
+  # weight = 300
+  # identifier = "portfolio"
+  # url = "/portfolio/"
 
   [[main]]
   name = "About"
@@ -22,24 +22,24 @@
   identifier = "about"
   url = "/about/"
 
-  [[main]]
-  name = "Accomplishments"
-  weight = 500
-  identifier = "accomplishments"
+  # [[main]]
+  # name = "Accomplishments"
+  # weight = 500
+  # identifier = "accomplishments"
 
-  [[main]]
-  name = "Awards"
-  weight = 510
-  identifier = "awards"
-  url = "/awards/"
-  parent = "accomplishments"  
+  # [[main]]
+  # name = "Awards"
+  # weight = 510
+  # identifier = "awards"
+  # url = "/awards/"
+  # parent = "accomplishments"  
 
-  [[main]]
-  name = "Certifications"
-  weight = 520
-  identifier = "certifications"
-  url = "/certifications/"
-  parent = "accomplishments"
+  # [[main]]
+  # name = "Certifications"
+  # weight = 520
+  # identifier = "certifications"
+  # url = "/certifications/"
+  # parent = "accomplishments"
 
   [[main]]
   name = "Contact"
