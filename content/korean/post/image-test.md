@@ -3,6 +3,7 @@ author = "Hugo Authors"
 title = "Guide to Thumbnails in Hugo"
 date = "2019-03-04"
 description = "Guide to Thumbnails in Hugo"
+draft = true
 tags = [
     "thumbnail",
 ]
