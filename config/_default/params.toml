@@ -1,89 +1,79 @@
+
+title = "I'm KrPark"
 author = "Keunreol Park"
-twitter = "@ritter4u"
-largeTwitterCard = false # set to true if you want to show a large twitter card image. The default is a small twitter card image
-introDescription = "Technologist, continual incremental improvement."
-# introURL = "about/" # set the url for the 'read more' button below the introDescription, or set to false to not show the button
-# description = "" # set your site's description here. will be use for home page content meta tags (seo). Alternatively set this description in your homepage content file i.e content/_index.md. Whatever is set in the latter will take precedence
+#copyright = "2020-2021"
+#description = "Call me Jane"
+profilePicture = "images/profile.jpg"
+keywords = ""
+favicon = "favicons/"
+# example ["css/custom.css"]
+customCss = []
+# example ["js/custom.js"]
+customJs = [] 
+mainSections = ["post"]
+images = ["images/site-feature-image.png"]
+doNotLoadAnimations = false
+# Form Spree Contact Form
+#contactFormAction = "https://formspree.io/f/your-form-hash-here"
+#contactFormReCaptcha = "your-site-key-here"
+# Google Fonts
+#googleFonts = ["Indie+Flower", "Roboto:ital,wght@0,100;0,400;0,700;1,400"]
+# Google Site Verify
+#googleSiteVerify = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+singleDateFormat = "2/1/2006"
+indexDateFormat = "2/1/2006"
+listDateFormat = "2/1/2006"
+# Commento Comments
+# CommentoURL = "https://commento.example.com/js/commento.js"
+# Read More links for truncated summaries
+# readMore = true
+# postSectionName = "blog"
+# relatedPosts = true
+# numberOfRelatedPosts = 3
 
-# showShare = false # Uncomment to not show share buttons on each post. Also available in each post's front matter.
 
-# Google analytics Id
-ga_analytics = "G-YP8PLL40SK"
+reversepagetitle = true # When set to 'true', the Window Title will be reversed to 'Title | Author' instead of the default 'Author | Title'
 
-# Baidu analytics Id
-# baidu_analytics = "XXXXXXXX"
+# hidesidebar = true
 
-# limit the number of taxonomies links shown on the sidebar of each page by default.
-numberOfTagsShown = 14 # Applies for all other default & custom taxonomies. e.g categories, brands see https://gohugo.io/content-management/taxonomies#what-is-a-taxonomy
+[simpleAnalytics]
+# enable = true
+# customurl = "https://analytics.example.com"
 
-# will be used on share >> twitter, facebook, linkedin
-fallBackOgImage = "images/thumbnail.png"
+[plausibleAnalytics]
+# domain = "example.com"
+# serverURL = "https://analytics.example.com"
 
-# sets the maximum number of lines per codeblock. The codeblock will however be scrollable and expandable.
-codeMaxLines = 7
+[umami]
+# serverURL = "example.com"
+# id = "94db1cb1-74f4-4a40-ad6c-962362670409"
 
-# disable showing line numbers by default. Switch to `true` if you'd rather have them on.
-codeLineNumbers = false
+## Math settings
+[math]
+enable = false  # options: true, false. Enable math support globally, default: false. You can always enable math on per page.
+use = "katex"  # options: "katex", "mathjax". default is "katex".
 
-# enable math notation. Switch to `true` to enable mathjax in your site.
-enableMathNotation = false
+## Social links
+# use 'fab' when brand icons, use 'fas' when standard solid icons.
+[[socialIcons]]
+icon = "fab fa-linkedin"
+title = "Linkedin"
+url = "https://de.linkedin.com/"
 
-# directory(s) where your articles are located
-mainSections = ["post"] # see config details here https://gohugo.io/functions/where/#mainsections
+[[socialIcons]]
+icon = "fab fa-github"
+title = "GitHub"
+url = "https://github.com/lxndrblz/anatole/"
 
-# center logo on navbar
-centerLogo = false # Set to "true" for centering or "false" for left aligned.
+[[socialIcons]]
+icon = "fab fa-instagram"
+title = "instagram"
+url = "https://www.instagram.com/"
 
-logo = "logos/logo.png"
+[[socialIcons]]
+icon = "fas fa-envelope"
+title = "e-mail"
+url = "mailto:mail@example.com"
 
-# Label Non inline images on an article body
-figurePositionShow = false # toggle on or off globally
-# you can toggle this behaviour on or off on per page using the same variable inside your articles frontmatter
-figurePositionLabel = "Figure" # the text before image number e.g Figure 1.0
-
-# Set the collapsed mobile navigation to either appear from the left or the right
-mobileNavigation = "left" # if you prefer right change to 'right'
-
-# some site owners want to decide how they would like their sites to be introduced users. These settings give you as a site owner to decide how the user will view your site for the first time.
-
-# please note that you cannot enforce both modes at the same time. i.e by enforcing one mode, you priotise it over the other (by setting it to true). enforceDarkMode will be commented out
-
-# please also not that mode toggle UI will remain in place. That way, if a user prefers darkmode, they can have their way.
-
-enforceLightMode = false
-# enforceDarkMode = false
-
-# customize footer icon. see issue https://github.com/chipzoller/hugo-clarity/issues/77
-# footerLogo = "icons/copy.svg"
-
-# Text for the languages menu.
-languageMenuName = "🌐"
-
-# Title separator, default to |.
-# titleSeparator = "|"
-
-# Enable or disable comments globally. Default to true.
-# comments = false
-
-# Maximum number of recent posts.
-# numberOfRecentPosts = 8
-
-# Maximum number of featured posts.
-# numberOfFeaturedPosts = 8
-
-# Date format. Checkout https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference for details.
-# dateFormat = "2006-01-02" # Default to "Jan 2, 2006".
-customFonts = true # toggle to true if you want to use custom fonts only.
-
-# The year when ths website was created, this value is used in the copyright
-# notice of the footer.
-# since = 2016
-
-# tell hugo where you store your icons e.g favicons. This is useful if you're using an apache server and there are conflicts >> see issue https://github.com/chipzoller/hugo-clarity/issues/74. If this is applicable to you, be sure to copy the contents of https://github.com/chipzoller/hugo-clarity/tree/master/static/icons to your preferred icons directory 
-iconsDir = "icons/" # without a leading forward slash
-
-[plausible_analytics]
-enable = false # to enable plausible analytics set to true.
-websiteDomain = "ritter4u.github.io" # domain name of your website, most cases same as your base url
-# plausibleDomain = "plausible.io" # default is set to plausible.io, only required if plausible is selfhosted
-# scritpName = "plausible" # default is set to plausible, only required if using a custome name for script
+[mermaid]
+# enable = true
