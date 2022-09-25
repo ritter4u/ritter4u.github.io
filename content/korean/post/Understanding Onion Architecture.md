@@ -35,7 +35,7 @@ https://www.codeguru.com/csharp/understanding-onion-architecture/
 Onion Architecture는 제어 원리 의 역전(inversion of control )을 기반으로 합니다 . Onion Architecture는 도메인을 나타내는 코어를 향해 서로 인터페이스하는 여러 동심 레이어로 구성됩니다. 아키텍처는 고전적인 다중 계층 아키텍처에서와 같이 데이터 계층에 의존하지 않고 실제 도메인 모델에 의존합니다.
 
 # What are Some Problems with Onion Architecture?
-기존 아키텍처에 따라 UI 계층은 비즈니스 로직과 상호 작용하고 비즈니스 로직은 데이터 계층과 통신하며 모든 계층이 혼합되어 서로 크게 의존합니다. 3계층 및 n계층 아키텍처에서는 어떤 계층도 독립적이지 않습니다. 이 사실은 우려의 분리를 야기합니다. 이러한 시스템은 이해하고 유지하기가 매우 어렵습니다. 이 전통적인 아키텍처의 단점은 불필요한 결합입니다.
+기존 아키텍처에 따라 UI 계층은 비즈니스 로직과 상호 작용하고 비즈니스 로직은 데이터 계층과 통신하며 모든 계층이 혼합되어 서로 크게 의존합니다. 3계층 및 n계층 아키텍처에서는 어떤 계층도 독립적이지 않습니다. 이 사실은 관심사의 분리를 야기합니다. 이러한 시스템은 이해하고 유지하기가 매우 어렵습니다. 이 전통적인 아키텍처의 단점은 불필요한 결합입니다.
 
 ![Onion Architecture의 레이어](https://www.codeguru.com/wp-content/uploads/2021/07/Onion1.png)
 그림 1: Onion 아키텍처의 계층
