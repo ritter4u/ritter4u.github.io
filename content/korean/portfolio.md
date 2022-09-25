@@ -29,7 +29,7 @@ Learn more and contribute on [GitHub](https://github.com/gohugoio). -->
 #### Api개발 및 유지보수
 - 기간 : 2021.7~2022.9
 - 사용언어 : C#
-- DataSource : mssql
+- DataSource : MS-SQL
 - 주요 도구 : .net core framework 6, Azure, EFCore, Swagger, GitHub
 - 비고 : 
   - 다국어지원
@@ -46,7 +46,7 @@ Learn more and contribute on [GitHub](https://github.com/gohugoio). -->
 #### 뉴욕걸즈 사이트 자동주소 입력 개발 및 모바일 버전 수정
 - 기간 : 2020.2~2020.4
 - 사용언어 : PHP, Java, Javascript, Python
-- DataSource : Mysql, Oracle
+- DataSource : MySQL, Oracle
 - 주요 도구 : NODE.JS, Spring Boot, react-native, Docker, AWS, Puppeteer
 - 개발 목적 : 
   - 외부사이트에 회원정보를 대신 입력
@@ -55,7 +55,7 @@ Learn more and contribute on [GitHub](https://github.com/gohugoio). -->
 #### 뉴욕걸즈 사이트 기준 화폐 전환 및 중국어 확장
 - 기간 : 2019.5~2019.6
 - 사용언어 : PHP
-- DataSource : Mysql
+- DataSource : MySQL
 - 개발 목적 :
   - 사이트 기준화폐를 원화에서 달러로 전환
   - 중국 확장 브랜치 개발
@@ -64,7 +64,7 @@ Learn more and contribute on [GitHub](https://github.com/gohugoio). -->
 ### 재원생용 포트폴리오 관리 프로젝트 개발
 - 기간 : 2019.8~2019.10
 - 사용언어 : PHP, JavaScript
-- DataSource : Mysql
+- DataSource : MySQL
 - 주요 도구 : KimsQ
 - 개발 목적 : 
   - 슬로쿼리 개선
@@ -140,8 +140,8 @@ Learn more and contribute on [GitHub](https://github.com/gohugoio). -->
 - DataSource : MySQL
 - 주요 도구 : Chart.js
 - 비고 :
-    - 광고데이터 관련어드민제작
-    - 차트 js를 사용 보고서생성
+    - 광고데이터 관련 어드민제작
+    -  Chart.js를 사용 보고서생성
 ### [트레져헌터](https://treasurehunter.co.kr)
 #### 크리마켓 리뉴얼
 - 기간 : 2015.11
@@ -321,7 +321,7 @@ Learn more and contribute on [GitHub](https://github.com/gohugoio). -->
 #### Yahoo!Gugi Lifemap	쿼리 포팅 & db connection
 - 기간 : 2007.11
 - 사용언어 : PHP
-- DataSource : Oracle, MySql
+- DataSource : Oracle, MySQL
 - 주요 도구 : CVS
 #### Yahoo!Gugi 맵 레버리징
 - 기간 : 2007.10
@@ -379,7 +379,7 @@ Learn more and contribute on [GitHub](https://github.com/gohugoio). -->
 #### 범아산업 홈페이지 제작
 - 기간 : 2004.12
 - 사용언어 : PHP
-- DataSource : MySql
+- DataSource : MySQL
 - 주요 도구 : Borland c++
 - 비고:
   - 어드민만 C++
@@ -393,17 +393,17 @@ Learn more and contribute on [GitHub](https://github.com/gohugoio). -->
 #### 사이트 개발
 - 기간 : 2000.10~2001.01
 - 사용언어 : PHP
-- DataSource : MySql
+- DataSource : MySQL
 ### 까치라인
 #### 렉마운트 로그 분석 프로그램
 - 기간 : 2000.8~2001.10
 - 사용언어 : PHP
-- DataSource : MySql
+- DataSource : MySQL
 #### 프랜차이즈 홈 페이지 시스템
 - 기간 : 2000.8~2001.10
 - 사용언어 : PHP
-- DataSource : MySql
+- DataSource : MySQL
 #### CGI 관리  
 - 기간 : 2000.8~2001.10
 - 사용언어 : C++
-- DataSource : MySql
+- DataSource : MySQL
