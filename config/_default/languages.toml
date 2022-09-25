@@ -13,7 +13,7 @@
 #LanguageName = "AR"
 
 [ko]
-title = "My blog"
+title = "Keunreol Park"
 weight = 1
 LanguageName = "KO"
 contentDir = "content/korean"
