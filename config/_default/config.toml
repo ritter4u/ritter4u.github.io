@@ -46,3 +46,10 @@ localizedDates = false
 [[related.indices]]
   name = 'tags'
   weight = 80
+
+[params.utterances]
+repo = "ritter4u/comment"
+issueTerm = "pathname"
+theme= "preferred-color-scheme"
+label = "comments"
+crossorigin = "anonymous"
