@@ -1,17 +1,3 @@
-#[en]
-#title = "My blog"
-#weight = 3
-#LanguageName = "EN"
-#contentDir = "content/english"
-#
-#[ar]
-#title = "فلانة الفلانية"
-#description = "أنا أعمل كمطورة ويب في شركة س"
-#contentDir = "content/arabic"
-#weight = 2
-#LanguageDirection = "rtl"
-#LanguageName = "AR"
-
 [ko]
 title = "Keunreol Park"
 weight = 1
