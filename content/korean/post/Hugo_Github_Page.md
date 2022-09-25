@@ -5,7 +5,7 @@ description: "Hugo Github 반영 작업로그"
 categories: [blog]
 tags: [blog, github, Hugo]
 publishdate : 2021-04-02
-draft: false
+draft: true
 ---
 # 사용했던 SSG 
 - [hexo](https://hexo.io/) NodeJs로 만들어진 SSG
