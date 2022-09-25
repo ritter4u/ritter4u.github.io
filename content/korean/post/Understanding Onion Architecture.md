@@ -3,6 +3,7 @@ author: Keunreol Park
 title:  Understanding Onion Architecture
 date: 2022-09-25
 description: A brief guide Understanding Onion Architecture
+categories: ["Architecture"]
 tags: [
     "Onion Architecture",
     "C#"
