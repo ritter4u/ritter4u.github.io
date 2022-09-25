@@ -50,7 +50,7 @@ reversepagetitle = true # When set to 'true', the Window Title will be reversed 
 
 ## Math settings
 [math]
-enable = false  # options: true, false. Enable math support globally, default: false. You can always enable math on per page.
+enable = true  # options: true, false. Enable math support globally, default: false. You can always enable math on per page.
 use = "katex"  # options: "katex", "mathjax". default is "katex".
 
 ## Social links
@@ -65,15 +65,15 @@ icon = "fab fa-github"
 title = "GitHub"
 url = "https://github.com/ritter4u/"
 
-[[socialIcons]]
-icon = "fab fa-instagram"
-title = "instagram"
-url = "https://www.instagram.com/"
-
-[[socialIcons]]
-icon = "fas fa-envelope"
-title = "e-mail"
-url = "mailto:ritter4u@gmail.com"
+#[[socialIcons]]
+#icon = "fab fa-instagram"
+#title = "instagram"
+#url = "https://www.instagram.com/"
+#
+#[[socialIcons]]
+#icon = "fas fa-envelope"
+#title = "e-mail"
+#url = "mailto:ritter4u@gmail.com"
 
 [mermaid]
 # enable = true
