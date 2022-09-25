@@ -48,7 +48,7 @@ localizedDates = false
   weight = 80
 
 [params.utterances]
-repo = "ritter4u/comment"
+repo = "ritter4u/ritter4u.github.io"
 issueTerm = "pathname"
 theme= "preferred-color-scheme"
 label = "comments"
