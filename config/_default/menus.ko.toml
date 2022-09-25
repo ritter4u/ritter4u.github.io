@@ -47,8 +47,8 @@
   identifier = "contact"
   url = "/contact/"
 
-  [[footer]]
-  name = "imprint"
-  weight = 1
-  identifier = "imprint"
-  url = "/imprint/"
+  # [[footer]]
+  # name = "imprint"
+  # weight = 1
+  # identifier = "imprint"
+  # url = "/imprint/"
