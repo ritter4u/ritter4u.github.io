@@ -29,7 +29,7 @@ https://www.codeguru.com/csharp/understanding-onion-architecture/
 - [Conclusion](#conclusion)
 
 # What is Onion Architecture?
-대부분의 기존 아키텍처는 긴밀한 결합 및 관심사 분리라는 근본적인 문제를 제기합니다. Onion Architecture 는 더 나은 테스트 가능성, 유지 관리 가능성 및 신뢰성 측면에서 애플리케이션을 빌드하는 더 나은 방법을 제공하기 위해 Jeffrey Palermo에 의해 도입되었습니다. Onion Architecture는 3계층 및 n계층 아키텍처가 직면한 문제를 해결하고 일반적인 문제에 대한 솔루션을 제공합니다. 양파 아키텍처 계층은 인터페이스를 사용하여 서로 상호 작용합니다. C# 프로그래머는 종속성 흐름으로 인해 Onion Architecture에 끌립니다. Onion Architecture로 작업하면서 C#을 더 배우고 싶다면 [TechRepublic Academy](https://academy.techrepublic.com/search?utf8=%E2%9C%93&query=C%2B%2B)를 방문하십시오.
+대부분의 기존 아키텍처는 긴밀한 결합 및 관심사 분리라는 근본적인 문제를 제기합니다. Onion Architecture 는 더 나은 테스트 가능성, 유지 관리 가능성 및 신뢰성 측면에서 애플리케이션을 빌드하는 더 나은 방법을 제공하기 위해 [Jeffrey Palermo](https://jeffreypalermo.com/2008/07/the-onion-architecture-part-1/)에 의해 도입되었습니다. Onion Architecture는 3계층 및 n계층 아키텍처가 직면한 문제를 해결하고 일반적인 문제에 대한 솔루션을 제공합니다. 양파 아키텍처 계층은 인터페이스를 사용하여 서로 상호 작용합니다. C# 프로그래머는 종속성 흐름으로 인해 Onion Architecture에 끌립니다. Onion Architecture로 작업하면서 C#을 더 배우고 싶다면 [TechRepublic Academy](https://academy.techrepublic.com/search?utf8=%E2%9C%93&query=C%2B%2B)를 방문하십시오.
 
 # Principles
 Onion Architecture는 제어의 역전(inversion of control )을 기반으로 합니다 . Onion Architecture는 도메인을 나타내는 코어를 향해 서로 인터페이스하는 여러 동심 레이어로 구성됩니다. 아키텍처는 고전적인 다중 계층 아키텍처에서와 같이 데이터 계층에 의존하지 않고 실제 도메인 모델에 의존합니다.
