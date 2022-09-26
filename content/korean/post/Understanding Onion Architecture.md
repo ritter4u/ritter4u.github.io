@@ -3,11 +3,11 @@ author: Keunreol Park
 title:  Understanding Onion Architecture # Title of the blog post.
 date: 2022-09-25 # Date of post creation.
 description: A brief guide Understanding Onion Architecture # Description used for search engine.
-featured: false # Sets if post is a featured post, making appear on the home page side bar.
+#featured: false # Sets if post is a featured post, making appear on the home page side bar.
 draft: false # Sets whether to render this page. Draft of true will not be rendered.
 toc: true # Controls if a table of contents should be generated for first-level links automatically.
 # menu: main
-featureImage: "/images/path/file.jpg" # Sets featured image on blog post.
+#featureImage: "/images/path/file.jpg" # Sets featured image on blog post.
 #thumbnail: "/images/path/thumbnail.png" # Sets thumbnail image appearing inside card on homepage.
 #shareImage: "/images/path/share.png" # Designate a separate image for social media sharing.
 codeMaxLines: 10 # Override global value for how many lines within a code block before auto-collapsing.
@@ -76,7 +76,8 @@ Onion Architecture 지침에서는 계층을 구현하는 방법에 대한 지�
 Onion Architecture의 몇 가지 단점은 다음과 같습니다.
 
 * 초보자가 이해하기 쉽지 않으며 학습 곡선이 필요합니다. 건축가는 대부분 레이어 간 책임 분할을 엉망으로 만듭니다.
-*  많이 사용되는 인터페이스
+* 많이 사용되는 인터페이스
+
 ## Conclusion
 Onion Architecture는 업계에서 널리 받아들여지고 있습니다. 매우 강력하고 두 가지 다른 아키텍처 스타일인 Layered 및 Hexagonal과 밀접하게 연결되어 있습니다. Onion Architecture는 Java 프로그래머보다 C# 프로그래머에게 더 매력적입니다. 그러나 아키텍처를 적용할지 여부에 대한 토론에서 고려하고 논쟁하는 것은 건축가 커뮤니티의 몫입니다.
 
