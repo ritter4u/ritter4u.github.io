@@ -27,7 +27,6 @@ tags:
 ---
 출처 : https://dev.to/jackmiras/xdebug-in-vscode-with-docker-379l
 
-[//]: # ([![잭 미라스]&#40;https://res.cloudinary.com/practicaldev/image/fetch/s--NlLZrqVr--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/196978/8abb8c25-1a2e-4f08-bcfc-4799fabe86b0.jpeg&#41;]&#40;https://dev.to/jackmiras&#41;)
 [잭 미라스](https://dev.to/jackmiras)
 
 게시일2021년 12월 10일 • 업데이트 날짜1월 29일
