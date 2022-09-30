@@ -23,7 +23,7 @@ tags:
 # comment: false # Disable comment if false.
 ---
 Created: September 27, 2022 11:57 PM
-<!-- URL: https://velog.io/@d-h-k/Mac%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C-IntelliJ-%ED%82%A4%EB%B3%B4%EB%93%9C-%EB%A7%88%EC%9A%B0%EC%8A%A4-%EC%9E%85%EB%A0%A5-%EC%94%B9%ED%9E%98-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0 -->
+URL: https://velog.io/@d-h-k/Mac%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C-IntelliJ-%ED%82%A4%EB%B3%B4%EB%93%9C-%EB%A7%88%EC%9A%B0%EC%8A%A4-%EC%9E%85%EB%A0%A5-%EC%94%B9%ED%9E%98-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0
 
 맥으로 넘어온 이후 인텔리제이가 가끔 키입력 혹은 마우스 입력히 씹히는 문제가 있었습니다. 꽤나 빈번하게 발생했던지라 해결책을 찾아 적용해봤더니 아름답게 작동하여 해결책을 공유합니다
 
