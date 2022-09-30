@@ -1,32 +1,28 @@
 ---
 title: "Xdebug in VSCode with Docker" # Title of the blog post.
-date: 2022-09-26T14:31:09+09:00 # Date of post creation.
+date: 2022-09-30T14:31:09+09:00 # Date of post creation.
 description: "Xdebug in VSCode with Docker " # Description used for search engine.
 featured: false # Sets if post is a featured post, making appear on the home page side bar.
 draft: false # Sets whether to render this page. Draft of true will not be rendered.
 toc: true # Controls if a table of contents should be generated for first-level links automatically.
 # menu: main
+# featureImage: "/images/path/file.jpg" # Sets featured image on blog post.
+# thumbnail: "/images/path/thumbnail.png" # Sets thumbnail image appearing inside card on homepage.
+# shareImage: "/images/path/share.png" # Designate a separate image for social media sharing.
 
-[//]: # (featureImage: "/images/path/file.jpg" # Sets featured image on blog post.)
-
-[//]: # (thumbnail: "/images/path/thumbnail.png" # Sets thumbnail image appearing inside card on homepage.)
-
-[//]: # (shareImage: "/images/path/share.png" # Designate a separate image for social media sharing.)
 codeMaxLines: 10 # Override global value for how many lines within a code block before auto-collapsing.
 codeLineNumbers: true # Override global value for showing of line numbers within code block.
 figurePositionShow: false # Override global value for showing the figure label.
 categories:
 - Programming
-  tags:
+tags:
 - Tip
 - PHP
 - Xdebug
 - VSCode
 - Docker
-
-[//]: # (  serises:)
-
-[//]: # (- Serises)
+# serises:
+# - Serises
 # comment: false # Disable comment if false.
 ---
 [![잭 미라스](https://res.cloudinary.com/practicaldev/image/fetch/s--NlLZrqVr--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/196978/8abb8c25-1a2e-4f08-bcfc-4799fabe86b0.jpeg)](https://dev.to/jackmiras)
