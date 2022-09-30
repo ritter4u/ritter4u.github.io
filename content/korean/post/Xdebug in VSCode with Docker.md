@@ -25,8 +25,8 @@ tags:
 # - Serises
 # comment: false # Disable comment if false.
 ---
-[![잭 미라스](https://res.cloudinary.com/practicaldev/image/fetch/s--NlLZrqVr--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/196978/8abb8c25-1a2e-4f08-bcfc-4799fabe86b0.jpeg)](https://dev.to/jackmiras)
 
+[//]: # ([![잭 미라스]&#40;https://res.cloudinary.com/practicaldev/image/fetch/s--NlLZrqVr--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/196978/8abb8c25-1a2e-4f08-bcfc-4799fabe86b0.jpeg&#41;]&#40;https://dev.to/jackmiras&#41;)
 [잭 미라스](https://dev.to/jackmiras)
 
 게시일2021년 12월 10일 • 업데이트 날짜1월 29일
@@ -44,7 +44,7 @@ tags:
 
 그러나 때때로 저는 Visual Studio Code로 뛰어들어 Xdebug를 사용하는 것이 더 빠를 것 같은 상황에 놓였습니다. 특히 Vim/Neovim에 익숙하지 않은 다른 사람들과 작업할 때 그렇습니다.
 
-### [](https://dev.to/jackmiras/xdebug-in-vscode-with-docker-379l#content)콘텐츠
+[//]: # (### []&#40;https://dev.to/jackmiras/xdebug-in-vscode-with-docker-379l#content&#41;콘텐츠)
 
 [//]: # (- [XDebug 설정 파일]&#40;https://dev.to/jackmiras/xdebug-in-vscode-with-docker-379l#xdebug-config-file&#41;)
 
