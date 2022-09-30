@@ -1,4 +1,3 @@
-출처 : https://dev.to/jackmiras/xdebug-in-vscode-with-docker-379l
 ---
 title: "Xdebug in VSCode with Docker" # Title of the blog post.
 date: 2022-09-26T14:31:09+09:00 # Date of post creation.
