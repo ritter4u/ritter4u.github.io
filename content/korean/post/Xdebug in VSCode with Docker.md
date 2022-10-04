@@ -1,18 +1,15 @@
-출처 : https://dev.to/jackmiras/xdebug-in-vscode-with-docker-379l
 ---
 title: "Xdebug in VSCode with Docker" # Title of the blog post.
-date: 2022-09-26T14:31:09+09:00 # Date of post creation.
+date: 2022-09-30T14:31:09+09:00 # Date of post creation.
 description: "Xdebug in VSCode with Docker " # Description used for search engine.
 featured: false # Sets if post is a featured post, making appear on the home page side bar.
-draft: true # Sets whether to render this page. Draft of true will not be rendered.
+draft: false # Sets whether to render this page. Draft of true will not be rendered.
 toc: true # Controls if a table of contents should be generated for first-level links automatically.
 # menu: main
+# featureImage: "/images/path/file.jpg" # Sets featured image on blog post.
+# thumbnail: "/images/path/thumbnail.png" # Sets thumbnail image appearing inside card on homepage.
+# shareImage: "/images/path/share.png" # Designate a separate image for social media sharing.
 
-[//]: # (featureImage: "/images/path/file.jpg" # Sets featured image on blog post.)
-
-[//]: # (thumbnail: "/images/path/thumbnail.png" # Sets thumbnail image appearing inside card on homepage.)
-
-[//]: # (shareImage: "/images/path/share.png" # Designate a separate image for social media sharing.)
 codeMaxLines: 10 # Override global value for how many lines within a code block before auto-collapsing.
 codeLineNumbers: true # Override global value for showing of line numbers within code block.
 figurePositionShow: false # Override global value for showing the figure label.
@@ -24,13 +21,11 @@ categories:
 - Xdebug
 - VSCode
 - Docker
-
-[//]: # (  serises:)
-
-[//]: # (- Serises)
+# serises:
+# - Serises
 # comment: false # Disable comment if false.
 ---
-[![잭 미라스](https://res.cloudinary.com/practicaldev/image/fetch/s--NlLZrqVr--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/196978/8abb8c25-1a2e-4f08-bcfc-4799fabe86b0.jpeg)](https://dev.to/jackmiras)
+출처 : https://dev.to/jackmiras/xdebug-in-vscode-with-docker-379l
 
 [잭 미라스](https://dev.to/jackmiras)
 
@@ -49,7 +44,7 @@ categories:
 
 그러나 때때로 저는 Visual Studio Code로 뛰어들어 Xdebug를 사용하는 것이 더 빠를 것 같은 상황에 놓였습니다. 특히 Vim/Neovim에 익숙하지 않은 다른 사람들과 작업할 때 그렇습니다.
 
-### [](https://dev.to/jackmiras/xdebug-in-vscode-with-docker-379l#content)콘텐츠
+[//]: # (### []&#40;https://dev.to/jackmiras/xdebug-in-vscode-with-docker-379l#content&#41;콘텐츠)
 
 [//]: # (- [XDebug 설정 파일]&#40;https://dev.to/jackmiras/xdebug-in-vscode-with-docker-379l#xdebug-config-file&#41;)
 
@@ -63,10 +58,9 @@ categories:
 
 PhpStorm을 시작하기 전에 먼저 Xdebug에 대한 몇 가지 사항을 지워서 IDE에서 수행할 변경 사항을 완전히 파악해야 합니다. 이 정보는 이전 게시물에서 [명령 지시문](https://dev.to/jackmiras/docker-compose-for-a-laravel-app-ie7#app-command-directive) 에 대한 주제에 대해 처음 소개되었습니다 . 어떤 시점에서 xdebug.ini 파일이 로컬 .docker 폴더에서 컨테이너의 /etc/php8/conf.d/50\_xdebug.ini로 복사되는 것을 알 수 있습니다.
 
-Even though the content of the file got shown, I intentionally didn't explain its content so that we could explore the debugging topic all at once, going all the way from configuring Xdebug to using it with an IDE.
+비록 파일 내용이 보여지긴 했지만, Xdebug 설정부터 IDE와 함께 사용하는 방법까지 디버깅 주제를 한 번에 살펴보기 위해 일부러 내용을 설명하지 않았습니다.
 
-Down below, we have the same Xdebug config file, from the previous post, placed at .docker/xdebug.ini on the root of our Laravel project. Each line of code will be explained further, but in case you want to know every configuration that you can add in this file, check the [Xdebug documentation](https://xdebug.org/docs/all_settings).
-
+아래에는 Laravel 프로젝트 루트의 .docker/xdebug.ini에 있는 이전 게시물과 동일한 Xdebug 구성 파일이 있습니다. 각 코드 줄에 대해 자세히 설명하지만 이 파일에 추가할 수 있는 모든 구성을 알고 싶다면 [Xdebug 문서](https://xdebug.org/docs/all_settings)를 확인하세요.
 ```ini
 zend_extension=xdebug.so
 xdebug.mode=develop,coverage,debug,profile
@@ -78,17 +72,17 @@ xdebug.client_port=9003
 xdebug.client_host=<YOUR_COMPUTER_IP>
 ```
 
-Enter fullscreen mode Exit fullscreen mode
+[//]: # (Enter fullscreen mode Exit fullscreen mode)
 
 ##### Explaining xdebug.ini
 
 - zend\_extension=xdebug.so
 
-A Zend extension hooks into “lower level” languages, a single extension can be both a PHP and a Zend extension, despite being very uncommon it's possible and Xdebug is a good example of it.
+Zend 확장은 "lower level" 언어에 연결되며, 단일 확장은 PHP와 Zend 확장 모두가 될 수 있습니다. 매우 드물기는 하지만 Xdebug가 좋은 예입니다.
 
 - xdebug.mode=develop,coverage,debug,profile
 
-This setting controls which Xdebug features got enabled, according to the documentation the following values gets accepted:
+이 설정은 다음 값이 허용되는 문서에 따라 활성화된 Xdebug 기능을 제어합니다.
 
 ```
 - develop
@@ -101,43 +95,40 @@ This setting controls which Xdebug features got enabled, according to the docume
     Enables Profiling, with which you can analyze performance bottlenecks with tools like CacheGrind.
 ```
 
-Enter fullscreen mode Exit fullscreen mode
+[//]: # (Enter fullscreen mode Exit fullscreen mode)
 
 - xdebug.idekey=docker
 
-Controls which IDE Key Xdebug should pass on to the debugging client or proxy. The IDE Key is only important for use with the DBGp Proxy Tool, although some IDEs are incorrectly picky as to what its value is. The default is based on the DBGP\_IDEKEY environment setting. If it is not present, the default falls back to an empty string.
+디버깅 클라이언트 또는 프록시에 전달해야 하는 IDE Key Xdebug를 제어합니다. IDE 키는 DBGp 프록시 도구와 함께 사용하는 경우에만 중요하지만 일부 IDE는 그 값에 대해 잘못 선택합니다. 기본값은 DBGP\_IDEKEY 환경 설정을 기반으로 합니다. 존재하지 않으면 기본값은 빈 문자열로 대체됩니다.
 
 - xdebug.start\_with\_request=yes
 
-The functionality starts when the PHP request starts, and before any PHP code getting executed. For example, xdebug.mode=trace and xdebug.start\_with\_request=yes starts a Function Trace for the whole request.
-
+이 기능은 PHP 요청이 시작될 때 PHP 코드가 실행되기 전에 시작됩니다. 예를 들어, xdebug.mode=trace 및 xdebug.start\_with\_request=yes는 전체 요청에 대한 함수 추적을 시작합니다.
 - xdebug.log=/dev/stdout
 
-Configure Xdebug's log file, but in here, we are redirecting the log content to the default stdout of our container.
+Xdebug의 로그 파일을 구성하지만 여기에서는 로그 내용을 컨테이너의 기본 표준 출력으로 리디렉션합니다.
 
-> In case you don't want to see these logs you can comment out this line of your **.docker/xdebug.ini** file by changing the line to `;xdebug.log=/dev/stdout`.
-
+> 이 로그를 보고 싶지 않은 경우 행을 `;xdebug.log=/dev/stdout`으로 변경하여 **.docker/xdebug.ini** 파일의 이 행을 주석 처리할 수 있습니다.
 - xdebug.log\_level=0
 
-Configures which logging messages should be added to the log file. In here we are instructing Xdebug to log only errors in the configuration, in case you want to see more information you can use the level 7 for log info or the level 10 for log debug.
+로그 파일에 추가해야 하는 로깅 메시지를 구성합니다. 여기에서 우리는 Xdebug가 구성의 오류만 기록하도록 지시하고 있습니다. 더 많은 정보를 보려면 로그 정보에 수준 7을 사용하거나 로그 디버그에 수준 10을 사용할 수 있습니다.
 
 - xdebug.client\_port=9003
 
-The port to which Xdebug tries to connect on the remote host. Port 9003 is the default for both Xdebug and the Command Line Debug Client. As many clients use this port number, it is best to leave this setting unchanged.
+Xdebug가 원격 호스트에서 연결을 시도하는 포트입니다. 포트 9003은 Xdebug와 명령줄 디버그 클라이언트 모두의 기본값입니다. 많은 클라이언트가 이 포트 번호를 사용하므로 이 설정을 변경하지 않는 것이 가장 좋습니다.
 
 - xdebug.client\_host=<YOUR\_COMPUTER\_IP>
 
-Configures the IP address or hostname where Xdebug will attempt to connect to when initiating a debugging connection. This address should be the address of the machine where your IDE or debugging client is listening for incoming debugging connections.
+디버깅 연결을 시작할 때 Xdebug가 연결을 시도할 IP 주소 또는 호스트 이름을 구성합니다. 이 주소는 IDE 또는 디버깅 클라이언트가 들어오는 디버깅 연결을 수신하는 컴퓨터의 주소여야 합니다.
 
-Down below, you can see how to correctly get your IP address in the main OS developers use. In case you are using a different OS, the commands may serve you as base to try to extrapolate a solution for your use case.
-
+아래에서 기본 OS 개발자가 사용하는 IP 주소를 올바르게 얻는 방법을 볼 수 있습니다. 다른 OS를 사용하는 경우 명령은 사용 사례에 대한 솔루션을 추정하기 위한 기반이 될 수 있습니다.
 macOS:
 
 ```
 ipconfig getifaddr en0
 ```
 
-Enter fullscreen mode Exit fullscreen mode
+[//]: # (Enter fullscreen mode Exit fullscreen mode)
 
 Windows with WSL:
 
@@ -145,7 +136,7 @@ Windows with WSL:
 grep nameserver /etc/resolv.conf | cut -d ' ' -f2
 ```
 
-Enter fullscreen mode Exit fullscreen mode
+[//]: # (Enter fullscreen mode Exit fullscreen mode)
 
 Linux (Debian based distros):
 
@@ -153,29 +144,29 @@ Linux (Debian based distros):
 hostname -I | cut -d ' ' -f1
 ```
 
-Enter fullscreen mode Exit fullscreen mode
+[//]: # (Enter fullscreen mode Exit fullscreen mode)
 
-Once you correctly found your IP address, you can place him into the xdebug.client\_host as mentioned before, and that will leave you with a directive looking similar to this xdebug.client\_host=192.168.0.158.
+IP 주소를 올바르게 찾으면 앞에서 언급한 대로 xdebug.client\_host에 배치할 수 있습니다. 그러면 이 xdebug.client\_host=192.168.0.158과 유사한 지시문이 남게 됩니다.
 
-In summary, you've instructed Xdebug to start from a request and try to send the debug events to the host with the IP 192.168.0.158 on the port 9003. Since the IP represents your computer, these means that when configuring Visual Studio Code to connect into Xdebug, the configuration will be extremely similar to when connecting to the localhost.
+요약하면, Xdebug에 요청에서 시작하고 포트 9003에서 IP 192.168.0.158을 사용하여 디버그 이벤트를 호스트로 보내도록 지시했습니다. IP는 컴퓨터를 나타내므로 Visual Studio Code를 다음과 같이 구성할 때 Xdebug에 연결하면 구성은 로컬 호스트에 연결할 때와 매우 유사합니다.
 
 ### Visual Studio Code
 
-As you may already know, Visual Studio Code or, VSCode for short, is a source-code editor made by Microsoft for Windows, Linux, and macOS. Features include support for debugging, syntax highlighting, intelligent code completion, snippets, code refactoring, and embedded Git.
+이미 알고 계시겠지만 Visual Studio Code 또는 VSCode는 Microsoft에서 Windows, Linux 및 macOS용으로 만든 소스 코드 편집기입니다. 기능에는 디버깅, 구문 강조 표시, 지능형 코드 완성, 스니펫, 코드 리팩토링 및 내장된 Git 지원이 포함됩니다.
 
-With that being said, you may be wondering… what do we need to have VSCode with all the aspects of an IDE with full-featured debug?
+그 말과 함께, 당신은 궁금해 할 것입니다... 완전한 기능을 갖춘 디버그가 있는 IDE의 모든 측면과 함께 VSCode가 있어야 하는 것은 무엇입니까?
 
-For starters, we will need to install the [PHP Debug](https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-debug) plugin from Felix Becker:
+우선 Felix Becker의 [PHP Debug](https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-debug) 플러그인을 설치해야 합니다.
 
 [![install-php-debug-plugin](https://res.cloudinary.com/practicaldev/image/fetch/s--_BUfn8IY--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/rz3bku4a3g3qhy0evqjm.png)](https://res.cloudinary.com/practicaldev/image/fetch/s--_BUfn8IY--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/rz3bku4a3g3qhy0evqjm.png)
 
-Thereafter, a file called launch.json have to be generated, this file gets used by the debugger in any language, which means that a part of this process can be reused when configuring the debugger on VSCode for other languages.
+그런 다음 launch.json이라는 파일을 생성해야 하며, 이 파일은 모든 언어의 디버거에서 사용됩니다. 즉, 다른 언어에 대해 VSCode에서 디버거를 구성할 때 이 프로세스의 일부를 재사용할 수 있습니다.
 
-You can generate the file by clicking in _Run and Debug > create a launch.json file > Docker: Debug in Container_, as the following screenshot shows:
+다음 스크린샷과 같이 _Run and Debug > create a launch.json file > Docker: Debug in Container_를 클릭하여 파일을 생성할 수 있습니다.
 
 [![설정 디버그](https://res.cloudinary.com/practicaldev/image/fetch/s--9I67c-kx--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/84a6bxw68hsue3oszlrz.png)](https://res.cloudinary.com/practicaldev/image/fetch/s--9I67c-kx--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/84a6bxw68hsue3oszlrz.png)
 
-Finally, the **launch.json** file will be created with a specification of `version` and an empty `configurations` array, just like the next screenshot shows:
+마지막으로 **launch.json** 파일은 다음 스크린샷과 같이 `version` 사양과 빈 `configurations` 배열로 생성됩니다.
 
 [![debug-launch-json-without-configurations](https://res.cloudinary.com/practicaldev/image/fetch/s--zmf33iH9--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4h3txx86nuyuugxnk3vv.png)](https://res.cloudinary.com/practicaldev/image/fetch/s--zmf33iH9--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4h3txx86nuyuugxnk3vv.png)
 
@@ -199,34 +190,33 @@ Now, to properly configure the **launch.json** file you have to add in the `conf
 
 ```
 
-Enter fullscreen mode Exit fullscreen mode
+[//]: # (Enter fullscreen mode Exit fullscreen mode)
 
 #### launch.json
 
 - name
 
-Indicates the name given to a configuration object.
+구성 개체에 지정된 이름을 나타냅니다.
 
 - type
 
-Indicates the underlying debugger getting used.
+사용 중인 기본 디버거를 나타냅니다.
 
 - request
-
-Indicates whether the configuration is intended to _launch_ the program or _attach_ to an already running instance.
+-
+구성이 프로그램을 _launch_할지 또는 이미 실행 중인 인스턴스에 _attach_할지 여부를 나타냅니다.
 
 - port
 
-Indicates the port on which to listen for Xdebug
+Xdebug를 수신할 포트를 나타냅니다.
 
 - pathMappings
 
-Indicates a mapping of server paths to local paths.
+로컬 경로에 대한 서버 경로 매핑을 나타냅니다.
 
-> When using /var/www/html/ as key, VSCode knows that the files at the container are under that path, and by using the ${workspaceFolder} as value, VSCode knows that locally the project files are under the current opened directory.
-
+> /var/www/html/을 키로 사용할 때 VSCode는 컨테이너의 파일이 해당 경로 아래에 있다는 것을 알고 ${workspaceFolder}를 값으로 사용하여 VSCode는 로컬에서 프로젝트 파일이 현재 열려 있는 디렉터리 아래에 있음을 알고 있습니다.
 * * *
 
-I encourage you to leave this launch.json file with its content in the project, so other team members can just clone the project, run the containers and enjoy a full-featured debug solution running in a container environment.
+다른 팀 구성원이 프로젝트를 복제하고 컨테이너를 실행하며 컨테이너 환경에서 실행되는 모든 기능을 갖춘 디버그 솔루션을 즐길 수 있도록 이 launch.json 파일을 해당 콘텐츠와 함께 프로젝트에 남겨두는 것이 좋습니다.
 
 Happy coding!
