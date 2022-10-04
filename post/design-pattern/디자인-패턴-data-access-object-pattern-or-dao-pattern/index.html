@@ -1,0 +1,119 @@
+<!doctype html><html dir=ltr lang=ko data-theme class=html><head><title>Keunreol Park</title><meta charset=utf-8><meta name=generator content="Hugo 0.104.2"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name=author content="Keunreol Park"><meta name=description content><link rel=stylesheet href=/scss/main.min.b2e0cb07595e3519ab1193bb421914e06c0e26b0cc561fef23b3c6131d4d2ffa.css integrity="sha256-suDLB1leNRmrEZO7QhkU4GwOJrDMVh/vI7PGEx1NL/o=" crossorigin=anonymous type=text/css><link rel=stylesheet href=/css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU=" crossorigin=anonymous type=text/css><link rel=stylesheet href=/css/custom.min.d611411edd3b51c8a7523f2c4ef28371022d09c32452588fe139a62da18c3815.css integrity="sha256-1hFBHt07UcinUj8sTvKDcQItCcMkUliP4TmmLaGMOBU=" crossorigin=anonymous media=screen><link rel=stylesheet href=/fontawesome/css/fontawesome.min.7d272de35b410fb165377550cdf9c4d3a80fbbcc961e111914e4d5c0eaf5729f.css integrity="sha256-fSct41tBD7FlN3VQzfnE06gPu8yWHhEZFOTVwOr1cp8=" crossorigin=anonymous type=text/css><link rel=stylesheet href=/fontawesome/css/solid.min.55d8333481b07a08e07cf6f37319753a2b47e99f4c395394c5747b48b495aa9b.css integrity="sha256-VdgzNIGwegjgfPbzcxl1OitH6Z9MOVOUxXR7SLSVqps=" crossorigin=anonymous type=text/css><link rel=stylesheet href=/fontawesome/css/regular.min.a7448d02590b43449364b6b5922ed9af5410abb4de4238412a830316dedb850b.css integrity="sha256-p0SNAlkLQ0STZLa1ki7Zr1QQq7TeQjhBKoMDFt7bhQs=" crossorigin=anonymous type=text/css><link rel=stylesheet href=/fontawesome/css/brands.min.9ed75a5d670c953fe4df935937674b4646f92674367e9e66eb995bb04e821647.css integrity="sha256-ntdaXWcMlT/k35NZN2dLRkb5JnQ2fp5m65lbsE6CFkc=" crossorigin=anonymous type=text/css><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Roboto&display=swap" rel=stylesheet><link rel="shortcut icon" href=/favicons/favicon.ico type=image/x-icon><link rel=apple-touch-icon sizes=180x180 href=/favicons/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicons/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicons/favicon-16x16.png><link rel=canonical href=https://ritter4u.github.io/post/design-pattern/%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4-data-access-object-pattern-or-dao-pattern/><script type=text/javascript src=/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js integrity="sha256-+RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI=" crossorigin=anonymous></script>
+<script type=text/javascript src=/js/anatole-theme-switcher.min.738c0e3a493854876aeab9e2316fd43f1936aeeac4cc6b3e60bb26456dba72ad.js integrity="sha256-c4wOOkk4VIdq6rniMW/UPxk2rurEzGs+YLsmRW26cq0=" crossorigin=anonymous></script><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://ritter4u.github.io/images/site-feature-image.png"><meta name=twitter:title content><meta name=twitter:description content="Data Access Object Pattern 또는 DAO 패턴은 낮은 수준의 데이터 액세스 API 또는 작업을 높은 수준의 비즈니스 서비스와 분리하는 데 사용됩니다."><meta property="og:title" content><meta property="og:description" content="Data Access Object Pattern 또는 DAO 패턴은 낮은 수준의 데이터 액세스 API 또는 작업을 높은 수준의 비즈니스 서비스와 분리하는 데 사용됩니다."><meta property="og:type" content="article"><meta property="og:url" content="https://ritter4u.github.io/post/design-pattern/%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4-data-access-object-pattern-or-dao-pattern/"><meta property="og:image" content="https://ritter4u.github.io/images/site-feature-image.png"><meta property="article:section" content="post"><meta property="og:site_name" content="Keunreol Park"><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","articleSection":"post","name":"","headline":"","alternativeHeadline":"","description":"
+      
+        Data Access Object Pattern 또는 DAO 패턴은 낮은 수준의 데이터 액세스 API 또는 작업을 높은 수준의 비즈니스 서비스와 분리하는 데 사용됩니다.
+
+
+      
+
+
+    ","inLanguage":"ko","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/ritter4u.github.io\/post\/design-pattern\/%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4-data-access-object-pattern-or-dao-pattern\/"},"author":{"@type":"Person","name":"Keunreol Park"},"creator":{"@type":"Person","name":"Keunreol Park"},"accountablePerson":{"@type":"Person","name":"Keunreol Park"},"copyrightHolder":{"@type":"Person","name":"Keunreol Park"},"copyrightYear":"0001","dateCreated":"0001-01-01T00:00:00.00Z","datePublished":"0001-01-01T00:00:00.00Z","dateModified":"0001-01-01T00:00:00.00Z","publisher":{"@type":"Organization","name":"Keunreol Park","url":"https://ritter4u.github.io","logo":{"@type":"ImageObject","url":"https:\/\/ritter4u.github.io\/favicons\/favicon-32x32.png","width":"32","height":"32"}},"image":["https://ritter4u.github.io/images/site-feature-image.png"],"url":"https:\/\/ritter4u.github.io\/post\/design-pattern\/%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4-data-access-object-pattern-or-dao-pattern\/","wordCount":"497","genre":[],"keywords":[]}</script></head><body class="body theme--light"><div class=wrapper><aside class=wrapper__sidebar><div class="sidebar
+animated fadeInDown"><div class=sidebar__content><div class=sidebar__introduction><img class=sidebar__introduction-profileimage src=/images/Imperial_Seal_of_the_Korean_Empire.svg alt="profile picture"><div class=sidebar__introduction-title><a href=/>Keunreol Park</a></div><div class=sidebar__introduction-description><p></p></div></div><ul class=sidebar__list><li class=sidebar__list-item><a href=https://github.com/ritter4u/ target=_blank rel=noopener aria-label=GitHub title=GitHub><i class="fab fa-github fa-2x" aria-hidden=true></i></a></li></ul></div><footer class="footer footer__sidebar"><ul class=footer__list><li class=footer__item>&copy;
+Keunreol Park
+2022</li></ul></footer><script type=text/javascript src=/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ=" crossorigin=anonymous></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css integrity=sha384-t5CR+zwDAROtph0PXGte6ia8heboACF9R5l/DiY+WZ3P2lxNgvJkQk5n7GPvLMYw crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js integrity=sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8+w2LAIftJEULZABrF9PPFv+tVkH crossorigin=anonymous></script><script defer src=https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js integrity=sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB+w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v crossorigin=anonymous onload=renderMathInElement(document.body)></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YP8PLL40SK"></script>
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-YP8PLL40SK",{anonymize_ip:!1})}</script></div></aside><main class=wrapper__main><header class=header><div class="animated fadeInDown"><a role=button class=navbar-burger data-target=navMenu aria-label=menu aria-expanded=false><span aria-hidden=true class=navbar-burger__line></span>
+<span aria-hidden=true class=navbar-burger__line></span>
+<span aria-hidden=true class=navbar-burger__line></span></a><nav class=nav><ul class=nav__list id=navMenu><li class=nav__list-item><a href=/ title>Home</a></li><li class=nav__list-item><a href=/categories/ title>Categories</a></li><li class=nav__list-item><a href=/post/ title>Posts</a></li><li class=nav__list-item><a href=/series/ title>Series</a></li><li class=nav__list-item><a href=/tags/ title>Tags</a></li><li class=nav__list-item><a href=/portfolio/ title>프로젝트 수행 이력</a></li></ul><ul class="nav__list nav__list--end"><li class=nav__list-item><div class=themeswitch><a title="Switch Theme"><i class="fas fa-adjust fa-fw" aria-hidden=true></i></a></div></li></ul></nav></div></header><div class="post
+animated fadeInDown"><div class=post__content><h1></h1><ul class=post__meta><li class=post__meta-item><em class="fas fa-calendar-day post__meta-icon"></em>
+<span class=post__meta-text>1/1/0001</span></li><li class=post__meta-item><em class="fas fa-stopwatch post__meta-icon"></em>
+<span class=post__meta-text>읽는 시간 3분</span></li></ul><hr><p>Data Access Object Pattern 또는 DAO 패턴은 낮은 수준의 데이터 액세스 API 또는 작업을 높은 수준의 비즈니스 서비스와 분리하는 데 사용됩니다. 다음은 Data Access Object Pattern의 참여자입니다.</p><ul><li><p><strong>데이터 액세스 개체 인터페이스</strong> - 이 인터페이스는 모델 개체에서 수행할 표준 작업을 정의합니다.</p></li><li><p><strong>Data Access Object 구체 클래스</strong> - 이 클래스는 위의 인터페이스를 구현합니다. 이 클래스는 데이터베이스/xml 또는 기타 저장 메커니즘이 될 수 있는 데이터 소스에서 데이터를 가져오는 역할을 합니다.</p></li><li><p><strong>모델 개체 또는 값 개체</strong> - 이 개체는 DAO 클래스를 사용하여 검색된 데이터를 저장하기 위한 get/set 메서드를 포함하는 간단한 POJO입니다.</p></li></ul><h2 id=구현>구현</h2><p>모델 또는 값 개체로 작동하는 <em>Student</em> 개체를 만들 것입니다. _StudentDao_는 데이터 액세스 개체 인터페이스입니다. _StudentDaoImpl_은 데이터 액세스 개체 인터페이스를 구현하는 구체적인 클래스입니다. 데모 클래스인 _DaoPatternDemo_는 _StudentDao_를 사용하여 데이터 액세스 개체 패턴의 사용을 보여줍니다.</p><p><img src=https://www.tutorialspoint.com/design_pattern/images/dao_pattern_uml_diagram.jpg alt="데이터 접근 객체 패턴 UML 다이어그램"></p><h2 id=1-단계>1 단계</h2><p>값 개체를 만듭니다.</p><p><em>학생.자바</em></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln> 1</span><span class=cl>공개 수업 학생 {
+</span></span><span class=line><span class=ln> 2</span><span class=cl>   개인 문자열 이름;
+</span></span><span class=line><span class=ln> 3</span><span class=cl>   개인 int 롤 아니요;
+</span></span><span class=line><span class=ln> 4</span><span class=cl>
+</span></span><span class=line><span class=ln> 5</span><span class=cl>   학생(문자열 이름, int 롤 번호){
+</span></span><span class=line><span class=ln> 6</span><span class=cl>      this.name = 이름;
+</span></span><span class=line><span class=ln> 7</span><span class=cl>      this.rollNo = 롤번호;
+</span></span><span class=line><span class=ln> 8</span><span class=cl>   }
+</span></span><span class=line><span class=ln> 9</span><span class=cl>
+</span></span><span class=line><span class=ln>10</span><span class=cl>   공개 문자열 getName() {
+</span></span><span class=line><span class=ln>11</span><span class=cl>      반환 이름;
+</span></span><span class=line><span class=ln>12</span><span class=cl>   }
+</span></span><span class=line><span class=ln>13</span><span class=cl>
+</span></span><span class=line><span class=ln>14</span><span class=cl>   공개 무효 setName(문자열 이름) {
+</span></span><span class=line><span class=ln>15</span><span class=cl>      this.name = 이름;
+</span></span><span class=line><span class=ln>16</span><span class=cl>   }
+</span></span><span class=line><span class=ln>17</span><span class=cl>
+</span></span><span class=line><span class=ln>18</span><span class=cl>   공개 int getRollNo() {
+</span></span><span class=line><span class=ln>19</span><span class=cl>      반환 롤 아니요;
+</span></span><span class=line><span class=ln>20</span><span class=cl>   }
+</span></span><span class=line><span class=ln>21</span><span class=cl>
+</span></span><span class=line><span class=ln>22</span><span class=cl>   공개 무효 setRollNo(int rollNo) {
+</span></span><span class=line><span class=ln>23</span><span class=cl>      this.rollNo = 롤번호;
+</span></span><span class=line><span class=ln>24</span><span class=cl>   }
+</span></span><span class=line><span class=ln>25</span><span class=cl>}
+</span></span></code></pre></div><h2 id=2-단계>2 단계</h2><p>데이터 액세스 개체 인터페이스를 만듭니다.</p><p><em>학생다오.java</em></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>가져오기 java.util.List;
+</span></span><span class=line><span class=ln>2</span><span class=cl>
+</span></span><span class=line><span class=ln>3</span><span class=cl>공개 인터페이스 StudentDao {
+</span></span><span class=line><span class=ln>4</span><span class=cl>   공개 목록&lt;학생&gt; getAllStudents();
+</span></span><span class=line><span class=ln>5</span><span class=cl>   공개 학생 getStudent(int rollNo);
+</span></span><span class=line><span class=ln>6</span><span class=cl>   public void updateStudent(학생);
+</span></span><span class=line><span class=ln>7</span><span class=cl>   public void deleteStudent(학생);
+</span></span><span class=line><span class=ln>8</span><span class=cl>}
+</span></span></code></pre></div><h2 id=3단계>3단계</h2><p>위의 인터페이스를 구현하는 구체적인 클래스를 만듭니다.</p><p><em>StudentDaoImpl.java</em></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln> 1</span><span class=cl>가져오기 java.util.ArrayList;
+</span></span><span class=line><span class=ln> 2</span><span class=cl>가져오기 java.util.List;
+</span></span><span class=line><span class=ln> 3</span><span class=cl>
+</span></span><span class=line><span class=ln> 4</span><span class=cl>공개 클래스 StudentDaoImpl은 StudentDao {를 구현합니다.
+</span></span><span class=line><span class=ln> 5</span><span class=cl>
+</span></span><span class=line><span class=ln> 6</span><span class=cl>   //목록이 데이터베이스로 작동 중입니다.
+</span></span><span class=line><span class=ln> 7</span><span class=cl>   목록&lt;학생&gt; 학생;
+</span></span><span class=line><span class=ln> 8</span><span class=cl>
+</span></span><span class=line><span class=ln> 9</span><span class=cl>   공개 StudentDaoImpl(){
+</span></span><span class=line><span class=ln>10</span><span class=cl>      학생 = 새로운 ArrayList&lt;학생&gt;();
+</span></span><span class=line><span class=ln>11</span><span class=cl>      학생 student1 = new Student(&#34;Robert&#34;,0);
+</span></span><span class=line><span class=ln>12</span><span class=cl>      학생 student2 = new Student(&#34;John&#34;,1);
+</span></span><span class=line><span class=ln>13</span><span class=cl>      학생.추가(학생1);
+</span></span><span class=line><span class=ln>14</span><span class=cl>      학생.추가(학생2);
+</span></span><span class=line><span class=ln>15</span><span class=cl>   }
+</span></span><span class=line><span class=ln>16</span><span class=cl>   @우세하다
+</span></span><span class=line><span class=ln>17</span><span class=cl>   public void deleteStudent(학생 학생) {
+</span></span><span class=line><span class=ln>18</span><span class=cl>      학생.제거(학생.getRollNo());
+</span></span><span class=line><span class=ln>19</span><span class=cl>      System.out.println(&#34;학생: 롤 번호 &#34; + student.getRollNo() + &#34;, 데이터베이스에서 삭제됨&#34;);
+</span></span><span class=line><span class=ln>20</span><span class=cl>   }
+</span></span><span class=line><span class=ln>21</span><span class=cl>
+</span></span><span class=line><span class=ln>22</span><span class=cl>   // 데이터베이스에서 학생 목록 검색
+</span></span><span class=line><span class=ln>23</span><span class=cl>   @우세하다
+</span></span><span class=line><span class=ln>24</span><span class=cl>   공개 목록&lt;학생&gt; getAllStudents() {
+</span></span><span class=line><span class=ln>25</span><span class=cl>      재학생;
+</span></span><span class=line><span class=ln>26</span><span class=cl>   }
+</span></span><span class=line><span class=ln>27</span><span class=cl>
+</span></span><span class=line><span class=ln>28</span><span class=cl>   @우세하다
+</span></span><span class=line><span class=ln>29</span><span class=cl>   공개 학생 getStudent(int rollNo) {
+</span></span><span class=line><span class=ln>30</span><span class=cl>      학생을 반환합니다.get(rollNo);
+</span></span><span class=line><span class=ln>31</span><span class=cl>   }
+</span></span><span class=line><span class=ln>32</span><span class=cl>
+</span></span><span class=line><span class=ln>33</span><span class=cl>   @우세하다
+</span></span><span class=line><span class=ln>34</span><span class=cl>   public void updateStudent(학생 학생) {
+</span></span><span class=line><span class=ln>35</span><span class=cl>      학생.get(학생.getRollNo()).setName(학생.getName());
+</span></span><span class=line><span class=ln>36</span><span class=cl>      System.out.println(&#34;학생: 롤 번호 &#34; + student.getRollNo() + &#34;, 데이터베이스에서 업데이트됨&#34;);
+</span></span><span class=line><span class=ln>37</span><span class=cl>   }
+</span></span><span class=line><span class=ln>38</span><span class=cl>}
+</span></span></code></pre></div><h2 id=4단계>4단계</h2><p>_StudentDao_를 사용하여 데이터 액세스 개체 패턴 사용을 보여줍니다.</p><p><em>DaoPatternDemo.java</em></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln> 1</span><span class=cl>공개 클래스 DaoPatternDemo {
+</span></span><span class=line><span class=ln> 2</span><span class=cl>   공개 정적 무효 메인(문자열[] 인수) {
+</span></span><span class=line><span class=ln> 3</span><span class=cl>      StudentDao studentDao = new StudentDaoImpl();
+</span></span><span class=line><span class=ln> 4</span><span class=cl>
+</span></span><span class=line><span class=ln> 5</span><span class=cl>      //모든 학생 출력
+</span></span><span class=line><span class=ln> 6</span><span class=cl>      (학생 학생 : studentDao.getAllStudents()) {
+</span></span><span class=line><span class=ln> 7</span><span class=cl>         System.out.println(&#34;학생: [RollNo: &#34; + student.getRollNo() + &#34;, 이름: &#34; + student.getName() + &#34; ]&#34;);
+</span></span><span class=line><span class=ln> 8</span><span class=cl>      }
+</span></span><span class=line><span class=ln> 9</span><span class=cl>
+</span></span><span class=line><span class=ln>10</span><span class=cl>
+</span></span><span class=line><span class=ln>11</span><span class=cl>      //학생 업데이트
+</span></span><span class=line><span class=ln>12</span><span class=cl>      학생 학생 =studentDao.getAllStudents().get(0);
+</span></span><span class=line><span class=ln>13</span><span class=cl>      학생.setName(&#34;마이클&#34;);
+</span></span><span class=line><span class=ln>14</span><span class=cl>      StudentDao.updateStudent(학생);
+</span></span><span class=line><span class=ln>15</span><span class=cl>
+</span></span><span class=line><span class=ln>16</span><span class=cl>      //학생 가져오기
+</span></span><span class=line><span class=ln>17</span><span class=cl>      학생다오.getStudent(0);
+</span></span><span class=line><span class=ln>18</span><span class=cl>      System.out.println(&#34;학생: [RollNo: &#34; + student.getRollNo() + &#34;, 이름: &#34; + student.getName() + &#34; ]&#34;);
+</span></span><span class=line><span class=ln>19</span><span class=cl>   }
+</span></span><span class=line><span class=ln>20</span><span class=cl>}
+</span></span></code></pre></div><h2 id=5단계>5단계</h2><p>출력을 확인합니다.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>학생: [롤번호: 0, 이름: 로버트]
+</span></span><span class=line><span class=ln>2</span><span class=cl>학생: [롤번호 : 1, 이름 : John ]
+</span></span><span class=line><span class=ln>3</span><span class=cl>학생: 롤 번호 0, 데이터베이스에서 업데이트됨
+</span></span><span class=line><span class=ln>4</span><span class=cl>학생: [롤번호 : 0, 이름 : Michael ]
+</span></span></code></pre></div></div><div class=post__footer></div><div id=comment><h2>댓글</h2><script src=https://utteranc.es/client.js repo=ritter4u/ritter4u.github.io issue-term=pathname theme=preferred-color-scheme label=comments crossorigin=anonymous async></script></div></div></main></div><footer class="footer footer__base"><ul class=footer__list><li class=footer__item>&copy;
+Keunreol Park
+2022</li></ul></footer><script type=text/javascript src=/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ=" crossorigin=anonymous></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css integrity=sha384-t5CR+zwDAROtph0PXGte6ia8heboACF9R5l/DiY+WZ3P2lxNgvJkQk5n7GPvLMYw crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js integrity=sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8+w2LAIftJEULZABrF9PPFv+tVkH crossorigin=anonymous></script><script defer src=https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js integrity=sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB+w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v crossorigin=anonymous onload=renderMathInElement(document.body)></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YP8PLL40SK"></script>
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-YP8PLL40SK",{anonymize_ip:!1})}</script></body></html>

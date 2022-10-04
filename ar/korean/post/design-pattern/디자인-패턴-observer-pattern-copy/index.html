@@ -1,0 +1,111 @@
+<!doctype html><html dir=ltr lang=ar data-theme class=html><head><title>Keunreol Park</title><meta charset=utf-8><meta name=generator content="Hugo 0.104.2"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name=author content="Keunreol Park"><meta name=description content><link rel=stylesheet href=/scss/main.min.b2e0cb07595e3519ab1193bb421914e06c0e26b0cc561fef23b3c6131d4d2ffa.css integrity="sha256-suDLB1leNRmrEZO7QhkU4GwOJrDMVh/vI7PGEx1NL/o=" crossorigin=anonymous type=text/css><link rel=stylesheet href=/css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU=" crossorigin=anonymous type=text/css><link rel=stylesheet href=/css/custom.min.d611411edd3b51c8a7523f2c4ef28371022d09c32452588fe139a62da18c3815.css integrity="sha256-1hFBHt07UcinUj8sTvKDcQItCcMkUliP4TmmLaGMOBU=" crossorigin=anonymous media=screen><link rel=stylesheet href=/fontawesome/css/fontawesome.min.7d272de35b410fb165377550cdf9c4d3a80fbbcc961e111914e4d5c0eaf5729f.css integrity="sha256-fSct41tBD7FlN3VQzfnE06gPu8yWHhEZFOTVwOr1cp8=" crossorigin=anonymous type=text/css><link rel=stylesheet href=/fontawesome/css/solid.min.55d8333481b07a08e07cf6f37319753a2b47e99f4c395394c5747b48b495aa9b.css integrity="sha256-VdgzNIGwegjgfPbzcxl1OitH6Z9MOVOUxXR7SLSVqps=" crossorigin=anonymous type=text/css><link rel=stylesheet href=/fontawesome/css/regular.min.a7448d02590b43449364b6b5922ed9af5410abb4de4238412a830316dedb850b.css integrity="sha256-p0SNAlkLQ0STZLa1ki7Zr1QQq7TeQjhBKoMDFt7bhQs=" crossorigin=anonymous type=text/css><link rel=stylesheet href=/fontawesome/css/brands.min.9ed75a5d670c953fe4df935937674b4646f92674367e9e66eb995bb04e821647.css integrity="sha256-ntdaXWcMlT/k35NZN2dLRkb5JnQ2fp5m65lbsE6CFkc=" crossorigin=anonymous type=text/css><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Roboto&display=swap" rel=stylesheet><link rel="shortcut icon" href=/favicons/favicon.ico type=image/x-icon><link rel=apple-touch-icon sizes=180x180 href=/favicons/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicons/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicons/favicon-16x16.png><link rel=canonical href=https://ritter4u.github.io/ar/korean/post/design-pattern/%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4-observer-pattern-copy/><script type=text/javascript src=/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js integrity="sha256-+RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI=" crossorigin=anonymous></script>
+<script type=text/javascript src=/js/anatole-theme-switcher.min.738c0e3a493854876aeab9e2316fd43f1936aeeac4cc6b3e60bb26456dba72ad.js integrity="sha256-c4wOOkk4VIdq6rniMW/UPxk2rurEzGs+YLsmRW26cq0=" crossorigin=anonymous></script><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://ritter4u.github.io/images/site-feature-image.png"><meta name=twitter:title content><meta name=twitter:description content="Observer pattern is used when there is one-to-many relationship between objects such as if one object is modified, its depenedent objects are to be notified automatically."><meta property="og:title" content><meta property="og:description" content="Observer pattern is used when there is one-to-many relationship between objects such as if one object is modified, its depenedent objects are to be notified automatically."><meta property="og:type" content="article"><meta property="og:url" content="https://ritter4u.github.io/ar/korean/post/design-pattern/%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4-observer-pattern-copy/"><meta property="og:image" content="https://ritter4u.github.io/images/site-feature-image.png"><meta property="article:section" content="korean"><meta property="og:site_name" content="I'm KrPark"><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","articleSection":"korean","name":"","headline":"","alternativeHeadline":"","description":"
+      
+        Observer pattern is used when there is one-to-many relationship between objects such as if one object is modified, its depenedent objects are to be notified automatically.
+
+
+      
+
+
+    ","inLanguage":"ko","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/ritter4u.github.io\/ar\/korean\/post\/design-pattern\/%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4-observer-pattern-copy\/"},"author":{"@type":"Person","name":"Keunreol Park"},"creator":{"@type":"Person","name":"Keunreol Park"},"accountablePerson":{"@type":"Person","name":"Keunreol Park"},"copyrightHolder":{"@type":"Person","name":"Keunreol Park"},"copyrightYear":"0001","dateCreated":"0001-01-01T00:00:00.00Z","datePublished":"0001-01-01T00:00:00.00Z","dateModified":"0001-01-01T00:00:00.00Z","publisher":{"@type":"Organization","name":"Keunreol Park","url":"https://ritter4u.github.io","logo":{"@type":"ImageObject","url":"https:\/\/ritter4u.github.io\/favicons\/favicon-32x32.png","width":"32","height":"32"}},"image":["https://ritter4u.github.io/images/site-feature-image.png"],"url":"https:\/\/ritter4u.github.io\/ar\/korean\/post\/design-pattern\/%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4-observer-pattern-copy\/","wordCount":"407","genre":[],"keywords":[]}</script></head><body class="body theme--light"><div class=wrapper><aside class=wrapper__sidebar><div class="sidebar
+animated fadeInDown"><div class=sidebar__content><div class=sidebar__introduction><img class=sidebar__introduction-profileimage src=/images/Imperial_Seal_of_the_Korean_Empire.svg alt="profile picture"><div class=sidebar__introduction-title><a href=/ar>I'm KrPark</a></div><div class=sidebar__introduction-description><p></p></div></div><ul class=sidebar__list><li class=sidebar__list-item><a href=https://github.com/ritter4u/ target=_blank rel=noopener aria-label=GitHub title=GitHub><i class="fab fa-github fa-2x" aria-hidden=true></i></a></li></ul></div><footer class="footer footer__sidebar"><ul class=footer__list><li class=footer__item>&copy;
+Keunreol Park
+2022</li></ul></footer><script type=text/javascript src=/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ=" crossorigin=anonymous></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css integrity=sha384-t5CR+zwDAROtph0PXGte6ia8heboACF9R5l/DiY+WZ3P2lxNgvJkQk5n7GPvLMYw crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js integrity=sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8+w2LAIftJEULZABrF9PPFv+tVkH crossorigin=anonymous></script><script defer src=https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js integrity=sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB+w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v crossorigin=anonymous onload=renderMathInElement(document.body)></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YP8PLL40SK"></script>
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-YP8PLL40SK",{anonymize_ip:!1})}</script></div></aside><main class=wrapper__main><header class=header><div class="animated fadeInDown"><a role=button class=navbar-burger data-target=navMenu aria-label=menu aria-expanded=false><span aria-hidden=true class=navbar-burger__line></span>
+<span aria-hidden=true class=navbar-burger__line></span>
+<span aria-hidden=true class=navbar-burger__line></span></a><nav class=nav><ul class=nav__list id=navMenu><li class=nav__list-item><a href=/ar/ title>الرئيسية</a></li><li class=nav__list-item><a href=/ar/post/ title>المنشورات</a></li><li class=nav__list-item><a href=/ar/about/ title>حول</a></li><li class=nav__list-item><a href=/ar/contact/ title>للتواصل</a></li></ul><ul class="nav__list nav__list--end"><li class=nav__list-item><div class=themeswitch><a title="Switch Theme"><i class="fas fa-adjust fa-fw" aria-hidden=true></i></a></div></li></ul></nav></div></header><div class="post
+animated fadeInDown"><div class=post__content><h1></h1><hr><p>Observer pattern is used when there is one-to-many relationship between objects such as if one object is modified, its depenedent objects are to be notified automatically. Observer pattern falls under behavioral pattern category.</p><h2 id=implementation>Implementation</h2><p>Observer pattern uses three actor classes. Subject, Observer and Client. Subject is an object having methods to attach and detach observers to a client object. We have created an abstract class <em>Observer</em> and a concrete class <em>Subject</em> that is extending class <em>Observer</em>.</p><p><em>ObserverPatternDemo</em>, our demo class, will use <em>Subject</em> and concrete class object to show observer pattern in action.</p><p><img src=https://www.tutorialspoint.com/design_pattern/images/observer_pattern_uml_diagram.jpg alt="Observer Pattern UML Diagram"></p><h2 id=step-1>Step 1</h2><p>Create Subject class.</p><p><em>Subject.java</em></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln> 1</span><span class=cl>import java.util.ArrayList;
+</span></span><span class=line><span class=ln> 2</span><span class=cl>import java.util.List;
+</span></span><span class=line><span class=ln> 3</span><span class=cl>
+</span></span><span class=line><span class=ln> 4</span><span class=cl>public class Subject {
+</span></span><span class=line><span class=ln> 5</span><span class=cl>
+</span></span><span class=line><span class=ln> 6</span><span class=cl>   private List&lt;Observer&gt; observers = new ArrayList&lt;Observer&gt;();
+</span></span><span class=line><span class=ln> 7</span><span class=cl>   private int state;
+</span></span><span class=line><span class=ln> 8</span><span class=cl>
+</span></span><span class=line><span class=ln> 9</span><span class=cl>   public int getState() {
+</span></span><span class=line><span class=ln>10</span><span class=cl>      return state;
+</span></span><span class=line><span class=ln>11</span><span class=cl>   }
+</span></span><span class=line><span class=ln>12</span><span class=cl>
+</span></span><span class=line><span class=ln>13</span><span class=cl>   public void setState(int state) {
+</span></span><span class=line><span class=ln>14</span><span class=cl>      this.state = state;
+</span></span><span class=line><span class=ln>15</span><span class=cl>      notifyAllObservers();
+</span></span><span class=line><span class=ln>16</span><span class=cl>   }
+</span></span><span class=line><span class=ln>17</span><span class=cl>
+</span></span><span class=line><span class=ln>18</span><span class=cl>   public void attach(Observer observer){
+</span></span><span class=line><span class=ln>19</span><span class=cl>      observers.add(observer);
+</span></span><span class=line><span class=ln>20</span><span class=cl>   }
+</span></span><span class=line><span class=ln>21</span><span class=cl>
+</span></span><span class=line><span class=ln>22</span><span class=cl>   public void notifyAllObservers(){
+</span></span><span class=line><span class=ln>23</span><span class=cl>      for (Observer observer : observers) {
+</span></span><span class=line><span class=ln>24</span><span class=cl>         observer.update();
+</span></span><span class=line><span class=ln>25</span><span class=cl>      }
+</span></span><span class=line><span class=ln>26</span><span class=cl>   } 
+</span></span><span class=line><span class=ln>27</span><span class=cl>}
+</span></span></code></pre></div><h2 id=step-2>Step 2</h2><p>Create Observer class.</p><p><em>Observer.java</em></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>public abstract class Observer {
+</span></span><span class=line><span class=ln>2</span><span class=cl>   protected Subject subject;
+</span></span><span class=line><span class=ln>3</span><span class=cl>   public abstract void update();
+</span></span><span class=line><span class=ln>4</span><span class=cl>}
+</span></span></code></pre></div><h2 id=step-3>Step 3</h2><p>Create concrete observer classes</p><p><em>BinaryObserver.java</em></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln> 1</span><span class=cl>public class BinaryObserver extends Observer{
+</span></span><span class=line><span class=ln> 2</span><span class=cl>
+</span></span><span class=line><span class=ln> 3</span><span class=cl>   public BinaryObserver(Subject subject){
+</span></span><span class=line><span class=ln> 4</span><span class=cl>      this.subject = subject;
+</span></span><span class=line><span class=ln> 5</span><span class=cl>      this.subject.attach(this);
+</span></span><span class=line><span class=ln> 6</span><span class=cl>   }
+</span></span><span class=line><span class=ln> 7</span><span class=cl>
+</span></span><span class=line><span class=ln> 8</span><span class=cl>   @Override
+</span></span><span class=line><span class=ln> 9</span><span class=cl>   public void update() {
+</span></span><span class=line><span class=ln>10</span><span class=cl>      System.out.println( &#34;Binary String: &#34; + Integer.toBinaryString( subject.getState() ) ); 
+</span></span><span class=line><span class=ln>11</span><span class=cl>   }
+</span></span><span class=line><span class=ln>12</span><span class=cl>}
+</span></span></code></pre></div><p><em>OctalObserver.java</em></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln> 1</span><span class=cl>public class OctalObserver extends Observer{
+</span></span><span class=line><span class=ln> 2</span><span class=cl>
+</span></span><span class=line><span class=ln> 3</span><span class=cl>   public OctalObserver(Subject subject){
+</span></span><span class=line><span class=ln> 4</span><span class=cl>      this.subject = subject;
+</span></span><span class=line><span class=ln> 5</span><span class=cl>      this.subject.attach(this);
+</span></span><span class=line><span class=ln> 6</span><span class=cl>   }
+</span></span><span class=line><span class=ln> 7</span><span class=cl>
+</span></span><span class=line><span class=ln> 8</span><span class=cl>   @Override
+</span></span><span class=line><span class=ln> 9</span><span class=cl>   public void update() {
+</span></span><span class=line><span class=ln>10</span><span class=cl>     System.out.println( &#34;Octal String: &#34; + Integer.toOctalString( subject.getState() ) ); 
+</span></span><span class=line><span class=ln>11</span><span class=cl>   }
+</span></span><span class=line><span class=ln>12</span><span class=cl>}
+</span></span></code></pre></div><p><em>HexaObserver.java</em></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln> 1</span><span class=cl>public class HexaObserver extends Observer{
+</span></span><span class=line><span class=ln> 2</span><span class=cl>
+</span></span><span class=line><span class=ln> 3</span><span class=cl>   public HexaObserver(Subject subject){
+</span></span><span class=line><span class=ln> 4</span><span class=cl>      this.subject = subject;
+</span></span><span class=line><span class=ln> 5</span><span class=cl>      this.subject.attach(this);
+</span></span><span class=line><span class=ln> 6</span><span class=cl>   }
+</span></span><span class=line><span class=ln> 7</span><span class=cl>
+</span></span><span class=line><span class=ln> 8</span><span class=cl>   @Override
+</span></span><span class=line><span class=ln> 9</span><span class=cl>   public void update() {
+</span></span><span class=line><span class=ln>10</span><span class=cl>      System.out.println( &#34;Hex String: &#34; + Integer.toHexString( subject.getState() ).toUpperCase() ); 
+</span></span><span class=line><span class=ln>11</span><span class=cl>   }
+</span></span><span class=line><span class=ln>12</span><span class=cl>}
+</span></span></code></pre></div><h2 id=step-4>Step 4</h2><p>Use <em>Subject</em> and concrete observer objects.</p><p><em>ObserverPatternDemo.java</em></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln> 1</span><span class=cl>public class ObserverPatternDemo {
+</span></span><span class=line><span class=ln> 2</span><span class=cl>   public static void main(String[] args) {
+</span></span><span class=line><span class=ln> 3</span><span class=cl>      Subject subject = new Subject();
+</span></span><span class=line><span class=ln> 4</span><span class=cl>
+</span></span><span class=line><span class=ln> 5</span><span class=cl>      new HexaObserver(subject);
+</span></span><span class=line><span class=ln> 6</span><span class=cl>      new OctalObserver(subject);
+</span></span><span class=line><span class=ln> 7</span><span class=cl>      new BinaryObserver(subject);
+</span></span><span class=line><span class=ln> 8</span><span class=cl>
+</span></span><span class=line><span class=ln> 9</span><span class=cl>      System.out.println(&#34;First state change: 15&#34;);
+</span></span><span class=line><span class=ln>10</span><span class=cl>      subject.setState(15);
+</span></span><span class=line><span class=ln>11</span><span class=cl>      System.out.println(&#34;Second state change: 10&#34;);
+</span></span><span class=line><span class=ln>12</span><span class=cl>      subject.setState(10);
+</span></span><span class=line><span class=ln>13</span><span class=cl>   }
+</span></span><span class=line><span class=ln>14</span><span class=cl>}
+</span></span></code></pre></div><h2 id=step-5>Step 5</h2><p>Verify the output.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>First state change: 15
+</span></span><span class=line><span class=ln>2</span><span class=cl>Hex String: F
+</span></span><span class=line><span class=ln>3</span><span class=cl>Octal String: 17
+</span></span><span class=line><span class=ln>4</span><span class=cl>Binary String: 1111
+</span></span><span class=line><span class=ln>5</span><span class=cl>Second state change: 10
+</span></span><span class=line><span class=ln>6</span><span class=cl>Hex String: A
+</span></span><span class=line><span class=ln>7</span><span class=cl>Octal String: 12
+</span></span><span class=line><span class=ln>8</span><span class=cl>Binary String: 1010
+</span></span></code></pre></div></div><div class=post__footer></div></div></main></div><footer class="footer footer__base"><ul class=footer__list><li class=footer__item>&copy;
+Keunreol Park
+2022</li></ul></footer><script type=text/javascript src=/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ=" crossorigin=anonymous></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css integrity=sha384-t5CR+zwDAROtph0PXGte6ia8heboACF9R5l/DiY+WZ3P2lxNgvJkQk5n7GPvLMYw crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js integrity=sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8+w2LAIftJEULZABrF9PPFv+tVkH crossorigin=anonymous></script><script defer src=https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js integrity=sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB+w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v crossorigin=anonymous onload=renderMathInElement(document.body)></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YP8PLL40SK"></script>
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-YP8PLL40SK",{anonymize_ip:!1})}</script></body></html>
