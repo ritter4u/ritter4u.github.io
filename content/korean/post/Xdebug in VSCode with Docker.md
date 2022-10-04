@@ -15,7 +15,7 @@ codeLineNumbers: true # Override global value for showing of line numbers within
 figurePositionShow: false # Override global value for showing the figure label.
 categories:
 - Programming
-  tags:
+tags:
 - Tip
 - PHP
 - Xdebug
@@ -203,7 +203,7 @@ Now, to properly configure the **launch.json** file you have to add in the `conf
 사용 중인 기본 디버거를 나타냅니다.
 
 - request
--
+
 구성이 프로그램을 _launch_할지 또는 이미 실행 중인 인스턴스에 _attach_할지 여부를 나타냅니다.
 
 - port
