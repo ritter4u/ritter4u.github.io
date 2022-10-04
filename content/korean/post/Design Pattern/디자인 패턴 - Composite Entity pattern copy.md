@@ -1,0 +1,171 @@
+---
+title: "-" # Title of the blog post.
+date: 2022-10-01T02:48:57+09:00 # Date of post creation.
+description: "Article description." # Description used for search engine.
+featured: true # Sets if post is a featured post, making appear on the home page side bar.
+draft: true # Sets whether to render this page. Draft of true will not be rendered.
+toc: true # Controls if a table of contents should be generated for first-level links automatically.
+# menu: main
+featureImage: "/images/path/file.jpg" # Sets featured image on blog post.
+thumbnail: "/images/path/thumbnail.png" # Sets thumbnail image appearing inside card on homepage.
+shareImage: "/images/path/share.png" # Designate a separate image for social media sharing.
+codeMaxLines: 10 # Override global value for how many lines within a code block before auto-collapsing.
+codeLineNumbers: true # Override global value for showing of line numbers within code block.
+figurePositionShow: true # Override global value for showing the figure label.
+
+# comment: false # Disable comment if false.
+---
+
+  
+
+Composite Entity pattern is used in EJB persistence mechanism. A Composite entity is an EJB entity bean which represents a graph of objects. When a composite entity is updated, internally dependent objects beans get updated automatically as being managed by EJB entity bean. Following are the participants in Composite Entity Bean.
+
+-   **Composite Entity** - It is primary entity bean. It can be coarse grained or can contain a coarse grained object to be used for persistence purpose.
+    
+-   **Coarse-Grained Object** - This object contains dependent objects. It has its own life cycle and also manages life cycle of dependent objects.
+    
+-   **Dependent Object** - Dependent object is an object which depends on coarse grained object for its persistence lifecycle.
+    
+-   **Strategies** - Strategies represents how to implement a Composite Entity.
+    
+
+## Implementation
+
+We are going to create _CompositeEntity_ object acting as CompositeEntity. _CoarseGrainedObject_ will be a class which contains dependent objects. _CompositeEntityPatternDemo_, our demo class will use _Client_ class to demonstrate use of Composite Entity pattern.
+
+![Composite Entity Pattern UML Diagram](https://www.tutorialspoint.com/design_pattern/images/compositeentity_pattern_uml_diagram.jpg)
+
+## Step 1
+
+Create Dependent Objects.
+
+_DependentObject1.java_
+
+```
+public class DependentObject1 {
+
+   private String data;
+
+   public void setData(String data){
+      this.data = data; 
+   } 
+
+   public String getData(){
+      return data;
+   }
+}
+```
+
+_DependentObject2.java_
+
+```
+public class DependentObject2 {
+
+   private String data;
+
+   public void setData(String data){
+      this.data = data; 
+   } 
+
+   public String getData(){
+      return data;
+   }
+}
+```
+
+## Step 2
+
+Create Coarse Grained Object.
+
+_CoarseGrainedObject.java_
+
+```
+public class CoarseGrainedObject {
+   DependentObject1 do1 = new DependentObject1();
+   DependentObject2 do2 = new DependentObject2();
+
+   public void setData(String data1, String data2){
+      do1.setData(data1);
+      do2.setData(data2);
+   }
+
+   public String[] getData(){
+      return new String[] {do1.getData(),do2.getData()};
+   }
+}
+```
+
+## Step 3
+
+Create Composite Entity.
+
+_CompositeEntity.java_
+
+```
+public class CompositeEntity {
+   private CoarseGrainedObject cgo = new CoarseGrainedObject();
+
+   public void setData(String data1, String data2){
+      cgo.setData(data1, data2);
+   }
+
+   public String[] getData(){
+      return cgo.getData();
+   }
+}
+```
+
+## Step 4
+
+Create Client class to use Composite Entity.
+
+_Client.java_
+
+```
+public class Client {
+   private CompositeEntity compositeEntity = new CompositeEntity();
+
+   public void printData(){
+   
+      for (int i = 0; i < compositeEntity.getData().length; i++) {
+         System.out.println("Data: " + compositeEntity.getData()[i]);
+      }
+   }
+
+   public void setData(String data1, String data2){
+      compositeEntity.setData(data1, data2);
+   }
+}
+```
+
+## Step 5
+
+Use the _Client_ to demonstrate Composite Entity design pattern usage.
+
+_CompositeEntityPatternDemo.java_
+
+```
+public class CompositeEntityPatternDemo {
+   public static void main(String[] args) {
+   
+       Client client = new Client();
+       client.setData("Test", "Data");
+       client.printData();
+       client.setData("Second Test", "Data1");
+       client.printData();
+   }
+}
+
+```
+
+## Step 6
+
+Verify the output.
+
+```
+Data: Test
+Data: Data
+Data: Second Test
+Data: Data1
+
+```

@@ -1,0 +1,153 @@
+---
+title: "-" # Title of the blog post.
+date: 2022-10-01T02:48:57+09:00 # Date of post creation.
+description: "Article description." # Description used for search engine.
+featured: true # Sets if post is a featured post, making appear on the home page side bar.
+draft: true # Sets whether to render this page. Draft of true will not be rendered.
+toc: true # Controls if a table of contents should be generated for first-level links automatically.
+# menu: main
+featureImage: "/images/path/file.jpg" # Sets featured image on blog post.
+thumbnail: "/images/path/thumbnail.png" # Sets thumbnail image appearing inside card on homepage.
+shareImage: "/images/path/share.png" # Designate a separate image for social media sharing.
+codeMaxLines: 10 # Override global value for how many lines within a code block before auto-collapsing.
+codeLineNumbers: true # Override global value for showing of line numbers within code block.
+figurePositionShow: true # Override global value for showing the figure label.
+
+# comment: false # Disable comment if false.
+---
+
+  
+
+The Transfer Object pattern is used when we want to pass data with multiple attributes in one shot from client to server. Transfer object is also known as Value Object. Transfer Object is a simple POJO class having getter/setter methods and is serializable so that it can be transferred over the network. It does not have any behavior. Server Side business class normally fetches data from the database and fills the POJO and send it to the client or pass it by value. For client, transfer object is read-only. Client can create its own transfer object and pass it to server to update values in database in one shot. Following are the entities of this type of design pattern.
+
+-   **Business Object** - Business Service fills the Transfer Object with data.
+    
+-   **Transfer Object** - Simple POJO having methods to set/get attributes only.
+    
+-   **Client** - Client either requests or sends the Transfer Object to Business Object.
+    
+
+## Implementation
+
+We are going to create a _StudentBO_ as Business Object,_Student_ as Transfer Object representing our entities.
+
+_TransferObjectPatternDemo_, our demo class, is acting as a client here and will use _StudentBO_ and _Student_ to demonstrate Transfer Object Design Pattern.
+
+![Transfer Object Pattern UML Diagram](https://www.tutorialspoint.com/design_pattern/images/transferobject_pattern_uml_diagram.jpg)
+
+## Step 1
+
+Create Transfer Object.
+
+_StudentVO.java_
+
+```
+public class StudentVO {
+   private String name;
+   private int rollNo;
+
+   StudentVO(String name, int rollNo){
+      this.name = name;
+      this.rollNo = rollNo;
+   }
+
+   public String getName() {
+      return name;
+   }
+
+   public void setName(String name) {
+      this.name = name;
+   }
+
+   public int getRollNo() {
+      return rollNo;
+   }
+
+   public void setRollNo(int rollNo) {
+      this.rollNo = rollNo;
+   }
+}
+```
+
+## Step 2
+
+Create Business Object.
+
+_StudentBO.java_
+
+```
+import java.util.ArrayList;
+import java.util.List;
+
+public class StudentBO {
+
+   //list is working as a database
+   List<StudentVO> students;
+
+   public StudentBO(){
+      students = new ArrayList<StudentVO>();
+      StudentVO student1 = new StudentVO("Robert",0);
+      StudentVO student2 = new StudentVO("John",1);
+      students.add(student1);
+      students.add(student2);
+   }
+   public void deleteStudent(StudentVO student) {
+      students.remove(student.getRollNo());
+      System.out.println("Student: Roll No " + student.getRollNo() + ", deleted from database");
+   }
+
+   //retrive list of students from the database
+   public List<StudentVO> getAllStudents() {
+      return students;
+   }
+
+   public StudentVO getStudent(int rollNo) {
+      return students.get(rollNo);
+   }
+
+   public void updateStudent(StudentVO student) {
+      students.get(student.getRollNo()).setName(student.getName());
+      System.out.println("Student: Roll No " + student.getRollNo() +", updated in the database");
+   }
+}
+```
+
+## Step 3
+
+Use the _StudentBO_ to demonstrate Transfer Object Design Pattern.
+
+_TransferObjectPatternDemo.java_
+
+```
+public class TransferObjectPatternDemo {
+   public static void main(String[] args) {
+      StudentBO studentBusinessObject = new StudentBO();
+
+      //print all students
+      for (StudentVO student : studentBusinessObject.getAllStudents()) {
+         System.out.println("Student: [RollNo : " + student.getRollNo() + ", Name : " + student.getName() + " ]");
+      }
+
+      //update student
+      StudentVO student = studentBusinessObject.getAllStudents().get(0);
+      student.setName("Michael");
+      studentBusinessObject.updateStudent(student);
+
+      //get the student
+      student = studentBusinessObject.getStudent(0);
+      System.out.println("Student: [RollNo : " + student.getRollNo() + ", Name : " + student.getName() + " ]");
+   }
+}
+```
+
+## Step 4
+
+Verify the output.
+
+```
+Student: [RollNo : 0, Name : Robert ]
+Student: [RollNo : 1, Name : John ]
+Student: Roll No 0, updated in the database
+Student: [RollNo : 0, Name : Michael ]
+
+```
