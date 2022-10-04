@@ -25,8 +25,7 @@ tags:
 By [Tapas Pal](https://www.codeguru.com/csharp/understanding-onion-architecture/#:~:text=By-,Tapas%20Pal,-February%2012%2C%202018)
 February 12, 2018
 
-출처 : 
-https://www.codeguru.com/csharp/understanding-onion-architecture/
+출처 : https://www.codeguru.com/csharp/understanding-onion-architecture/
 
 
 ## What is Onion Architecture?

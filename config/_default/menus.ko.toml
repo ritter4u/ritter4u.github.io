@@ -10,9 +10,27 @@
   identifier = "posts"
   url = "/post/"
 
+  [[main]]
+  name = "Categories"
+  weight = 200
+  identifier = "Categories"
+  url = "/categories/"
+
+  [[main]]
+  name = "Series"
+  weight = 300
+  identifier = "Series"
+  url = "/series/"
+
+  [[main]]
+  name = "Tags"
+  weight = 400
+  identifier = "Tags"
+  url = "/tags/"
+
    [[main]]
    name = "프로젝트 수행 이력"
-   weight = 300
+   weight = 600
    identifier = "portfolio"
    url = "/portfolio/"
 
