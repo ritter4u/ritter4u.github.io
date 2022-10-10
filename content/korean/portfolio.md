@@ -61,7 +61,7 @@ Learn more and contribute on [GitHub](https://github.com/gohugoio). -->
   - 중국 확장 브랜치 개발
 
 ### [CMS에듀](https://www.cmsedu.co.kr)
-### 재원생용 포트폴리오 관리 프로젝트 개발
+#### 재원생용 포트폴리오 관리 프로젝트 개발
 - 기간 : 2019.8~2019.10
 - 사용언어 : PHP, JavaScript
 - DataSource : MySQL
