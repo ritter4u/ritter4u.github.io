@@ -5,34 +5,34 @@
   url = "/"
 
   [[main]]
-  name = "Posts"
+  name = "프로젝트 수행 이력"
   weight = 200
+  identifier = "portfolio"
+  url = "/portfolio/"
+
+  [[main]]
+  name = "Posts"
+  weight = 300
   identifier = "posts"
   url = "/post/"
 
   [[main]]
   name = "Categories"
-  weight = 200
+  weight = 400
   identifier = "Categories"
   url = "/categories/"
 
   [[main]]
   name = "Series"
-  weight = 300
+  weight = 500
   identifier = "Series"
   url = "/series/"
 
   [[main]]
   name = "Tags"
-  weight = 400
+  weight = 600
   identifier = "Tags"
   url = "/tags/"
-
-   [[main]]
-   name = "프로젝트 수행 이력"
-   weight = 600
-   identifier = "portfolio"
-   url = "/portfolio/"
 
 #  [[main]]
 #  name = "About"
