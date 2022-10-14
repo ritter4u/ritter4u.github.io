@@ -15,7 +15,7 @@ codeLineNumbers: true # Override global value for showing of line numbers within
 figurePositionShow: false # Override global value for showing the figure label.
 categories:
 - Programming
-  tags:
+tags:
 - Tip
 - PHP
 - Xdebug
