@@ -10,4 +10,4 @@ public
 .idea
 .fleet
 .history
-*.sublime-workspace
+*.sublime*
