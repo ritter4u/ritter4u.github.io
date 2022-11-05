@@ -8,8 +8,10 @@ draft: true
 publishdate : 2022-09-16
 draft : true
 ---
+
 /etc/wsl.conf
-``` conf
+
+```conf
 [automount]
 options = "metadata"
 ```
