@@ -1,4 +1,3 @@
-
 title = "I'm KrPark"
 author = "Keunreol Park"
 #copyright = "2020-2021"
@@ -9,7 +8,7 @@ favicon = "favicons/"
 # example ["css/custom.css"]
 customCss = ["css/custom.css"]
 # example ["js/custom.js"]
-customJs = [] 
+customJs = []
 mainSections = ["post"]
 images = ["images/site-feature-image.png"]
 doNotLoadAnimations = false
@@ -31,28 +30,25 @@ listDateFormat = "2/1/2006"
 # postSectionName = "blog"
 # relatedPosts = true
 # numberOfRelatedPosts = 3
-
-
 reversepagetitle = true # When set to 'true', the Window Title will be reversed to 'Title | Author' instead of the default 'Author | Title'
 
 # hidesidebar = true
-
 [simpleAnalytics]
+
 # enable = true
 # customurl = "https://analytics.example.com"
-
 [plausibleAnalytics]
+
 # domain = "example.com"
 # serverURL = "https://analytics.example.com"
-
 [umami]
+
 # serverURL = "example.com"
 # id = "94db1cb1-74f4-4a40-ad6c-962362670409"
-
 ## Math settings
 [math]
-enable = true  # options: true, false. Enable math support globally, default: false. You can always enable math on per page.
-use = "katex"  # options: "katex", "mathjax". default is "katex".
+enable = true # options: true, false. Enable math support globally, default: false. You can always enable math on per page.
+use = "katex" # options: "katex", "mathjax". default is "katex".
 
 ## Social links
 # use 'fab' when brand icons, use 'fas' when standard solid icons.
@@ -60,7 +56,6 @@ use = "katex"  # options: "katex", "mathjax". default is "katex".
 #icon = "fab fa-linkedin"
 #title = "Linkedin"
 #url = "https://de.linkedin.com/"
-
 [[socialIcons]]
 icon = "fab fa-github"
 title = "GitHub"
@@ -75,6 +70,5 @@ url = "https://github.com/ritter4u/"
 #icon = "fas fa-envelope"
 #title = "e-mail"
 #url = "mailto:ritter4u@gmail.com"
-
 [mermaid]
 # enable = true
