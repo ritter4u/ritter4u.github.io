@@ -2,11 +2,12 @@ _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
-.vs
-.vscode
-.idea
 vendor
 resources
 public
+.vs
+.vscode
+.idea
 .fleet
 .history
+*.sublime-workspace
