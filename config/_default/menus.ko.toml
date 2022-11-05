@@ -1,45 +1,43 @@
-  [[main]]
-  name = "Home"
-  identifier = "home"
-  weight = 100
-  url = "/"
+[[main]]
+name = "Home"
+identifier = "home"
+weight = 100
+url = "/"
 
-  [[main]]
-  name = "프로젝트 수행 이력"
-  weight = 200
-  identifier = "portfolio"
-  url = "/portfolio/"
+[[main]]
+name = "프로젝트 수행 이력"
+weight = 200
+identifier = "portfolio"
+url = "/portfolio/"
 
-  [[main]]
-  name = "Posts"
-  weight = 300
-  identifier = "posts"
-  url = "/post/"
+[[main]]
+name = "Posts"
+weight = 300
+identifier = "posts"
+url = "/post/"
 
-  [[main]]
-  name = "Categories"
-  weight = 400
-  identifier = "Categories"
-  url = "/categories/"
+[[main]]
+name = "Categories"
+weight = 400
+identifier = "Categories"
+url = "/categories/"
 
-  [[main]]
-  name = "Series"
-  weight = 500
-  identifier = "Series"
-  url = "/series/"
+[[main]]
+name = "Series"
+weight = 500
+identifier = "Series"
+url = "/series/"
 
-  [[main]]
-  name = "Tags"
-  weight = 600
-  identifier = "Tags"
-  url = "/tags/"
-
+[[main]]
+name = "Tags"
+weight = 600
+identifier = "Tags"
+url = "/tags/"
 #  [[main]]
 #  name = "About"
 #  weight = 400
 #  identifier = "about"
 #  url = "/about/"
-
 #  [[main]]
 #  name = "Accomplishments"
 #  weight = 500
@@ -51,22 +49,19 @@
 #  identifier = "awards"
 #  url = "/awards/"
 #  parent = "accomplishments"
-
 #  [[main]]
 #  name = "Certifications"
 #  weight = 520
 #  identifier = "certifications"
 #  url = "/certifications/"
 #  parent = "accomplishments"
-
 #  [[main]]
 #  name = "Contact"
 #  weight = 600
 #  identifier = "contact"
 #  url = "/contact/"
-
-  # [[footer]]
-  # name = "imprint"
-  # weight = 1
-  # identifier = "imprint"
-  # url = "/imprint/"
+# [[footer]]
+# name = "imprint"
+# weight = 1
+# identifier = "imprint"
+# url = "/imprint/"
