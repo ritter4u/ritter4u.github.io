@@ -5,9 +5,22 @@ _site
 vendor
 resources
 public
+.history
+.husky
+
+#editor files
+*.sublime*
 .vs
 .vscode
 .idea
 .fleet
-.history
-*.sublime*
+
+#npm or yarn
+node_modules
+yarn.lock
+package*
+.python*
+
+
+#prettier
+.prettier*
