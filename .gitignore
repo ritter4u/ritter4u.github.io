@@ -18,9 +18,9 @@ public
 #npm or yarn
 node_modules
 yarn.lock
-package*
+#package*
 .python*
 
 
 #prettier
-.prettier*
+#.prettier*
