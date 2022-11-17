@@ -16,7 +16,7 @@ categories:
   - Technology
 tags:
   - JWT
-#  - Tag_name2
+  - "JSON Web Tokens"
 # serises:
 #  - Serises
 # comment: false # Disable comment if false.
