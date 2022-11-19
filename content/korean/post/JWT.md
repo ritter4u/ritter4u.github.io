@@ -22,8 +22,10 @@ tags:
 # comment: false # Disable comment if false.
 ---
 출처 : https://jwt.io/introduction
+
 **신규:** [JWT 핸드북을 무료로](https://auth0.com/resources/ebooks/jwt-handbook?_ga=2.117482956.490692208.1668690053-459585628.1668690053&_gl=1*11xcbtg*rollup_ga*NDU5NTg1NjI4LjE2Njg2OTAwNTM.*rollup_ga_F1G3E656YZ*MTY2ODY5MDA1Mi4xLjEuMTY2ODY5MDA2NS40Ny4wLjA.) 받고 JWT 에 대해 자세히 알아보세요!
 
+## Introduction to JSON Web Tokens
 JWT(JSON Web Token)는 당사자 간에 정보를 JSON 개체로 안전하게 전송하기 위한 간결하고 독립적인 방법을 정의하는 개방형 표준( [RFC 7519](https://tools.ietf.org/html/rfc7519) )입니다. 이 정보는 디지털 서명되어 있으므로 확인하고 신뢰할 수 있습니다. **JWT는 비밀( HMAC** 알고리즘 포함) 또는 **RSA** 또는 **ECDSA** 를 사용하는 공개/개인 키 쌍을 사용 하여 서명할 수 있습니다 .
 
 JWT를 암호화하여 당사자 간에 비밀성을 제공할 수도 있지만 여기서는 _서명_ 된 토큰에 중점을 둘 것입니다. _서명된 토큰은 그 안에 포함된 클레임의 무결성_ 을 확인할 수 있는 반면 암호화된 토큰 은 다른 당사자로부터 해당 클레임을 _숨깁니다 ._ 공개/개인 키 쌍을 사용하여 토큰에 서명할 때 서명은 개인 키를 보유한 당사자만이 서명한 당사자임을 인증합니다.
