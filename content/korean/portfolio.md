@@ -186,30 +186,31 @@ Learn more and contribute on [GitHub](https://github.com/gohugoio). -->
 - 주요 도구 : Wordpress, AWS
 
 ### [웹액츄얼리](http://www.webactually.co.kr/)
+[//]: #### 기본 사이트 제작 업무
+- 기간 : 2014.4~2015.8
+- 사용언어 : PHP, Javascript
+- DataSource : MySQL
+- 주요 도구 : Wordpress, AWS, Magento, Laravel, CodeIgnighter, Wordpress, JQuery, SVN, GIT
 
 #### Goheyday
-
 - 기간 : 2015.6~2015.7
 - 사용언어 : PHP
 - DataSource : MySQL
 - 주요 도구 : Wordpress, AWS
 
 #### Joefresh Korea
-
 - 기간 : 2014.6~2015.6
 - 사용언어 : PHP
 - DataSource : MySQL
 - 주요 도구 : Jquery, Magento, CodeIgnighter, SVN
 
 #### 원광대 학과사이트 리뉴얼
-
 - 기간 : 2014.4~2014.6
 - 사용언어 : PHP
 - DataSource : MySQL
 - 주요 도구 : Wordpress, Jquery
 
 #### 글로벌 삼성 투마로우
-
 - 기간 : 2014.10 ~ 2014.12
 - 사용언어 : PHP
 - DataSource : MySQL
@@ -218,7 +219,6 @@ Learn more and contribute on [GitHub](https://github.com/gohugoio). -->
 ### Insight Lab
 
 #### 첨단포털시스템 고도화
-
 - 기간 : 2013.6~2013.9
 - 사용언어 : PHP
 - DataSource : MySQL
@@ -293,7 +293,13 @@ Learn more and contribute on [GitHub](https://github.com/gohugoio). -->
   - 활용정도에 따라 50%의 인건비의 절감이 가능
 
 ### Wevio
+[//]: #### 기본 사이트 제작 업무
 
+- 기간 : 2011.9~2012.12
+- 사용언어 : PHP, Javascript, ASP
+- DataSource : MySQL, MSSQL
+- 주요 도구 : Wordpress, Magento, CodeIgnitor, Jquery, SVN, Symfony
+  
 #### E.R.P 개발
 
 - 기간 : 2012.6~2012.9
