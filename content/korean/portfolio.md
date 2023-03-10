@@ -186,7 +186,7 @@ Learn more and contribute on [GitHub](https://github.com/gohugoio). -->
 - 주요 도구 : Wordpress, AWS
 
 ### [웹액츄얼리](http://www.webactually.co.kr/)
-[//]: #### 기본 사이트 제작 업무
+<!--  #### 기본 사이트 제작 업무 -->
 - 기간 : 2014.4~2015.8
 - 사용언어 : PHP, Javascript
 - DataSource : MySQL
@@ -293,7 +293,7 @@ Learn more and contribute on [GitHub](https://github.com/gohugoio). -->
   - 활용정도에 따라 50%의 인건비의 절감이 가능
 
 ### Wevio
-[//]: #### 기본 사이트 제작 업무
+<!--  #### 기본 사이트 제작 업무 -->
 
 - 기간 : 2011.9~2012.12
 - 사용언어 : PHP, Javascript, ASP
