@@ -307,7 +307,6 @@ Learn more and contribute on [GitHub](https://github.com/gohugoio). -->
 - DataSource : MySQL
 - 주요 도구 : SVN
 
-[//]: #
 [//]: # "#### 웹표준화 지원사헙"
 [//]: # "- 기간 : 2012.5~2012.12"
 [//]: # "- 사용언어 : PHP, JavaScript"
