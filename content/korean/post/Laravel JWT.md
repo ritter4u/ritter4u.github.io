@@ -25,7 +25,7 @@ tags:
 
 # Implementing JWT authentication in Laravel 9
 
-https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/
+<https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/>
 
 JSON web token (JWT) authentication is used to verify ownership of JSON data. JWT is not encryption, rather it determines if the data can be trusted because its ownership is verified. JWT is an open standard ([RFC 7519](https://tools.ietf.org/html/rfc7519)) that enables information to be securely transmitted between two parties as a JSON object. JWTs are digitally signed using either a public/private key pair or a secret.
 
@@ -33,24 +33,24 @@ In this article, we’ll demonstrate the process of implementing JWT authenticat
 
 Our demo will follow these steps:
 
--   [Install Laravel 9](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#install-laravel-9)
--   [Create a database](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#create-database)
--   [Connect to the database](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#connect-database)
--   [Make the migrations](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#make-migrations)
--   [Install and set up JWT](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#install-and-set-up-jwt)
--   [Configure AuthGuard](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#configure-authguard)
--   [Modify the `User` model](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#modify-user-model)
--   [Create the AuthController](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#create-authcontroller)
--   [Create the todo model, controller, and migration](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#create-todo-model-controller-migration)
--   [Modify the todo migration](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#modify-todo-migration)
--   [Modify the todo model](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#modify-todo-model)
--   [Modify the todo controller](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#modify-todo-controller)
--   [Add the API routes](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#add-api-routes)
--   [Test the application](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#test-application)
--   [Register the API](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#register-api)
--   [Log in to the API](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#log-in-api)
--   [Test the endpoints](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#test-endpoints)
--   [Create a todo](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#create-todo)
+- [Install Laravel 9](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#install-laravel-9)
+- [Create a database](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#create-database)
+- [Connect to the database](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#connect-database)
+- [Make the migrations](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#make-migrations)
+- [Install and set up JWT](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#install-and-set-up-jwt)
+- [Configure AuthGuard](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#configure-authguard)
+- [Modify the `User` model](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#modify-user-model)
+- [Create the AuthController](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#create-authcontroller)
+- [Create the todo model, controller, and migration](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#create-todo-model-controller-migration)
+- [Modify the todo migration](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#modify-todo-migration)
+- [Modify the todo model](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#modify-todo-model)
+- [Modify the todo controller](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#modify-todo-controller)
+- [Add the API routes](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#add-api-routes)
+- [Test the application](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#test-application)
+- [Register the API](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#register-api)
+- [Log in to the API](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#log-in-api)
+- [Test the endpoints](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#test-endpoints)
+- [Create a todo](https://blog.logrocket.com/implementing-jwt-authentication-laravel-9/#create-todo)
 
 Before jumping into the demo, let’s cover a brief overview of Laravel.
 
@@ -66,18 +66,18 @@ According to the [company’s website](http://laravel.com/), the following large
 
 Based on GitHub stars, [Laravel is reportedly the most popular backend framework](https://statisticsanddata.org/data/most-popular-backend-frameworks-2012-2022/) as of 2021. Here are some reasons why that developers like building with Laravel:
 
--   **MVC support:** Laravel supports development efforts using the MVC architectural paradigm, making it simple to use and ideal for both small and large applications. MVC streamlines coding structure, making it easier to maintain
--   **Robust ORM:** Laravel’s ORM, Eloquent, makes working with the database a breeze. Eloquent simplifies the process of creating relationships between interconnected database objects
--   **Inbuilt templating engine:** Laravel’s inbuilt templating engine (Blade) combines one or more templates with a data model to generate views, converting the templates into cached PHP code for increased efficiency. Blade also has a set of control structures, such as conditionals and loops, that are internally translated to their PHP counterparts
--   **Powerful CLI:** Laravel’s CLI, Artisan, is used to publish package assets, manage database migrations, and seed and produce boilerplate code for new controllers, models, and migrations. Artisan’s capabilities can be expanded through the addition of custom commands
--   **Multiple file systems:** Laravel includes support for cloud storage systems such as Amazon S3 and Rackspace Cloud Storage, as well as local storage. The API for each system is the same, making it straightforward to switch between different storage alternatives. In a distributed environment, these three methods can be combined into one application to serve files from many locations
--   **Inbuilt authentication systems:** Laravel provides scaffolding for secure, session-based authentication and also provides painless authentication through Sanctum for APIs and mobile applications
--   **Excellent documentation:** Laravel’s official documentation is extensive yet concise, making it useful for both beginners and experts
--   **Extensive testing:** Laravel provides inbuilt testing support with [PHPUnit](https://laravel.com/docs/9.x/testing). Laravel also provides attractive testing APIs, database seeding, and painless browser testing
--   **Choice of Monolith or API:** Laravel may be used with [Livewire](https://laravel-livewire.com/), to create robust, full-stack apps in PHP. Similarly, Laravel may be combined with [Inertia](https://inertiajs.com/) to create a monolithic JavaScript-driven frontend. Alternatively, Laravel can be used as a powerful backend API for a mobile app, Next.js project, or another frontend of your choosing
--   **Large, engaged community:** Laravel boasts an [extensive community of developers](https://laravel.io/) who are passionate about the framework and accommodating to developers of all skill levels
--   **Scalability:** The Laravel ecosystem offers a slew of tools and resources (e.g., [Forge](https://forge.laravel.com/), [Octane](https://laravel.com/docs/9.x/octane), [Vapor](https://vapor.laravel.com/)) for achieving enterprise-level scalability without the associated complexity
--   **Beautiful code:** Laravel places a strong emphasis on aesthetics; every feature is carefully studied with an eye toward providing an exceptional user experience. Its simple, elegant syntax places enhanced functionality at the developer’s fingertips
+- **MVC support:** Laravel supports development efforts using the MVC architectural paradigm, making it simple to use and ideal for both small and large applications. MVC streamlines coding structure, making it easier to maintain
+- **Robust ORM:** Laravel’s ORM, Eloquent, makes working with the database a breeze. Eloquent simplifies the process of creating relationships between interconnected database objects
+- **Inbuilt templating engine:** Laravel’s inbuilt templating engine (Blade) combines one or more templates with a data model to generate views, converting the templates into cached PHP code for increased efficiency. Blade also has a set of control structures, such as conditionals and loops, that are internally translated to their PHP counterparts
+- **Powerful CLI:** Laravel’s CLI, Artisan, is used to publish package assets, manage database migrations, and seed and produce boilerplate code for new controllers, models, and migrations. Artisan’s capabilities can be expanded through the addition of custom commands
+- **Multiple file systems:** Laravel includes support for cloud storage systems such as Amazon S3 and Rackspace Cloud Storage, as well as local storage. The API for each system is the same, making it straightforward to switch between different storage alternatives. In a distributed environment, these three methods can be combined into one application to serve files from many locations
+- **Inbuilt authentication systems:** Laravel provides scaffolding for secure, session-based authentication and also provides painless authentication through Sanctum for APIs and mobile applications
+- **Excellent documentation:** Laravel’s official documentation is extensive yet concise, making it useful for both beginners and experts
+- **Extensive testing:** Laravel provides inbuilt testing support with [PHPUnit](https://laravel.com/docs/9.x/testing). Laravel also provides attractive testing APIs, database seeding, and painless browser testing
+- **Choice of Monolith or API:** Laravel may be used with [Livewire](https://laravel-livewire.com/), to create robust, full-stack apps in PHP. Similarly, Laravel may be combined with [Inertia](https://inertiajs.com/) to create a monolithic JavaScript-driven frontend. Alternatively, Laravel can be used as a powerful backend API for a mobile app, Next.js project, or another frontend of your choosing
+- **Large, engaged community:** Laravel boasts an [extensive community of developers](https://laravel.io/) who are passionate about the framework and accommodating to developers of all skill levels
+- **Scalability:** The Laravel ecosystem offers a slew of tools and resources (e.g., [Forge](https://forge.laravel.com/), [Octane](https://laravel.com/docs/9.x/octane), [Vapor](https://vapor.laravel.com/)) for achieving enterprise-level scalability without the associated complexity
+- **Beautiful code:** Laravel places a strong emphasis on aesthetics; every feature is carefully studied with an eye toward providing an exceptional user experience. Its simple, elegant syntax places enhanced functionality at the developer’s fingertips
 
 ## Laravel JWT authentication vs. Sanctum or Passport
 
@@ -93,9 +93,9 @@ Now, let’s take a look at how to implement JWT authentication in Laravel 9. Th
 
 This tutorial is designed as a hands-on demonstration. Before getting started, ensure you’ve met the following requirements:
 
--   [PHP](https://www.php.net/manual/en/install.php), installed on your machine
--   [XAMPP](https://www.apachefriends.org/download.html), installed on your machine
--   Foundational knowledge of PHP
+- [PHP](https://www.php.net/manual/en/install.php), installed on your machine
+- [XAMPP](https://www.apachefriends.org/download.html), installed on your machine
+- Foundational knowledge of PHP
 
 ### Install Laravel 9
 
@@ -103,7 +103,7 @@ We’ll get started by creating a new Laravel 9 project.
 
 Install and navigate to the new Laravel project using these commands:
 
-```
+```shell
 composer create-project laravel/laravel laravel-jwt
 cd laravel-jwt
 ```
@@ -116,7 +116,7 @@ Create a MySQL database named `laravel-jwt`. For this demo, I’m using [XAMMP](
 
 To allow our Laravel application to interact with the newly formed database, we must first establish a connection. To do so, we’ll need to add our database credentials to the `.env` file:
 
-```
+```dotenv
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
@@ -129,7 +129,7 @@ DB_PASSWORD=
 
 The `User` table migration comes preinstalled in Laravel, so all we have to do is run it to create the table in our database. To create the `User` table, use the following command:
 
-```
+```shell
 php artisan migrate
 ```
 
@@ -139,25 +139,25 @@ Now that our database is set up, we’ll install and set up the Laravel JWT auth
 
 Install the newest version of the package using this command:
 
-```
+```shell
  composer require php-open-source-saver/jwt-auth
 ```
 
 Next, we need to make the package configurations public. Copy the JWT configuration file from the vendor to `confi/jwt.php` with this command:
 
-```
+```shell
 php artisan vendor:publish --provider="PHPOpenSourceSaver\JWTAuth\Providers\LaravelServiceProvider"
 ```
 
 Now, we need to generate a secret key to handle the token encryption. To do so, run this command:
 
-```
+```shell
 php artisan jwt:secret
 ```
 
 This will update our `.env` file with something like this:
 
-```
+```dotenv
 JWT_SECRET=xxxxxxxx
 ```
 
@@ -169,7 +169,7 @@ Inside the `config/auth.php` file, we’ll need to make a few changes to configu
 
 First, we’ll make the following changes to the file:
 
-```
+```php
 'defaults' => [
         'guard' => 'api',
         'passwords' => 'users',
@@ -200,7 +200,7 @@ In order to implement the `PHPOpenSourceSaverJWTAuthContractsJWTSubject` contrac
 
 Replace the code in the `app/Models/User.php` file, with the following:
 
-```
+```php
 namespace App\Models;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -253,13 +253,13 @@ Now, we’ll create a controller to handle the core logic of the authentication 
 
 First, we’ll run this command to generate the controller:
 
-```
+```shell
 php artisan make:controller AuthController
 ```
 
 Then, we’ll replace the controller’s content with the following code snippet:
 
-```
+```php
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -353,11 +353,11 @@ class AuthController extends Controller
 
 Here’s a quick explanation of the public functions in the `AuthController`:
 
--   `constructor`: We establish this function in our `controller` class so that we can use the `auth:api` middleware within it to block unauthenticated access to certain methods within the controller
--   `login`: This method authenticates a user with their email and password. When a user is successfully authenticated, the `Auth` facade `attempt()` method returns the JWT token. The generated token is retrieved and returned as JSON with the user object
--   `register`: This method creates the user record and logs in the user with token generations
--   `logout`: This method invalidates the user `Auth` token
--   `refresh`: This method invalidates the user `Auth` token and generates a new token
+- `constructor`: We establish this function in our `controller` class so that we can use the `auth:api` middleware within it to block unauthenticated access to certain methods within the controller
+- `login`: This method authenticates a user with their email and password. When a user is successfully authenticated, the `Auth` facade `attempt()` method returns the JWT token. The generated token is retrieved and returned as JSON with the user object
+- `register`: This method creates the user record and logs in the user with token generations
+- `logout`: This method invalidates the user `Auth` token
+- `refresh`: This method invalidates the user `Auth` token and generates a new token
 
 We’re done with setting up our JWT authentication!
 
@@ -369,7 +369,7 @@ But, for the love of Laravel, let’s add a simple todo feature to our project!
 
 We’ll create the `Todo` model, controller, and migration all at once with the following command:
 
-```
+```shell
 php artisan make:model Todo -mc
 ```
 
@@ -377,7 +377,7 @@ php artisan make:model Todo -mc
 
 Next, go to the `database/migrations/….create_todos_table.php` file, and replace the content with the following code:
 
-```
+```php
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -407,7 +407,7 @@ return new class extends Migration
 
 Now, navigate to the `app/Models/Todo.php` file, and replace the content with the following code.
 
-```
+```php
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -425,7 +425,7 @@ class Todo extends Model
 
 Next, go to the `app/Http/Controllers/TodoController.php` file, and replace the content with the following code:
 
-```
+```php
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -514,21 +514,21 @@ To access our newly created methods we need to define our API routes.
 
 ___
 
-### More great articles from LogRocket:
+### More great articles from LogRocket
 
--   Don't miss a moment with [The Replay](https://lp.logrocket.com/subscribe-thereplay), a curated newsletter from LogRocket
--   [Learn](https://blog.logrocket.com/rethinking-error-tracking-product-analytics/) how LogRocket's Galileo cuts through the noise to proactively resolve issues in your app
--   Use React's useEffect [to optimize your application's performance](https://blog.logrocket.com/understanding-react-useeffect-cleanup-function/)
--   Switch between [multiple versions of Node](https://blog.logrocket.com/switching-between-node-versions-during-development/)
--   [Discover how to animate](https://blog.logrocket.com/animate-react-app-animxyz/) your React app with AnimXYZ
--   [Explore Tauri](https://blog.logrocket.com/rust-solid-js-tauri-desktop-app/), a new framework for building binaries
--   Compare [NestJS vs. Express.js](https://blog.logrocket.com/nestjs-vs-express-js/)
+- Don't miss a moment with [The Replay](https://lp.logrocket.com/subscribe-thereplay), a curated newsletter from LogRocket
+- [Learn](https://blog.logrocket.com/rethinking-error-tracking-product-analytics/) how LogRocket's Galileo cuts through the noise to proactively resolve issues in your app
+- Use React's useEffect [to optimize your application's performance](https://blog.logrocket.com/understanding-react-useeffect-cleanup-function/)
+- Switch between [multiple versions of Node](https://blog.logrocket.com/switching-between-node-versions-during-development/)
+- [Discover how to animate](https://blog.logrocket.com/animate-react-app-animxyz/) your React app with AnimXYZ
+- [Explore Tauri](https://blog.logrocket.com/rust-solid-js-tauri-desktop-app/), a new framework for building binaries
+- Compare [NestJS vs. Express.js](https://blog.logrocket.com/nestjs-vs-express-js/)
 
 ___
 
 Navigate to the `routes/api.php` file, and replace the content with the following code:
 
-```
+```php
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
