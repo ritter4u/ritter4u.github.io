@@ -6,11 +6,8 @@ settings:
 
 dependencies:
   npm:
-    specifier: ^9.9.0
-    version: 9.9.0
-  prettier-plugin-toml:
-    specifier: ^0.3.5
-    version: 0.3.5
+    specifier: ^9.9.2
+    version: 9.9.2
 
 devDependencies:
   '@prettier/plugin-php':
@@ -28,6 +25,9 @@ devDependencies:
   prettier:
     specifier: ^2.8.8
     version: 2.8.8
+  prettier-plugin-toml:
+    specifier: ^0.3.5
+    version: 0.3.5
 
 packages:
 
@@ -69,14 +69,14 @@ packages:
     resolution: {integrity: sha512-549zoTUhz4WvSNX0U+G5M+SqCPBVaLyKvE3Rfi43ww6LyJt98cwZR9kMBjkcMS28/cyLgIiShBbS12mqeo4Vsw==}
     dependencies:
       chevrotain: 4.8.1
-    dev: false
+    dev: true
 
   /@toml-tools/parser@0.3.5:
     resolution: {integrity: sha512-ba1GnL5zc+X/nxkzrq+AvdxQv/0lqoI9PM2s6CZFGiKl/ftP49VhojoA/SSdC7FexYczeq/O81jyJk0+oHa+NQ==}
     dependencies:
       '@toml-tools/lexer': 0.3.5
       chevrotain: 4.8.1
-    dev: false
+    dev: true
 
   /@xml-tools/parser@1.0.11:
     resolution: {integrity: sha512-aKqQ077XnR+oQtHJlrAflaZaL7qZsulWc/i/ZEooar5JiWj1eLt0+Wg28cpa+XLney107wXqneC+oG1IZvxkTA==}
@@ -108,7 +108,7 @@ packages:
     resolution: {integrity: sha512-Dd2oHFdscdm8MSmG0ejTXdMlqKR5ryeKuwLpsf1ZOs3l8HD/jPfIY0MYs9Eh4X3gm9h0CR155zpVYFK+uAI3tA==}
     dependencies:
       regexp-to-ast: 0.4.0
-    dev: false
+    dev: true
 
   /chevrotain@7.1.1:
     resolution: {integrity: sha512-wy3mC1x4ye+O+QkEinVJkPf5u2vsrDIYW9G7ZuwFl6v/Yu0LwUuT2POsb+NUWApebyxfkQq6+yDfRExbnI5rcw==}
@@ -213,8 +213,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /npm@9.9.0:
-    resolution: {integrity: sha512-wkd7sjz4KmdmddYQcd0aTP73P1cEuPlekeulz4jTDeMVx/Zo5XZ5KQ1z3eUzV3Q/WZpEO0NJXTrD5FNFe6fhCA==}
+  /npm@9.9.2:
+    resolution: {integrity: sha512-D3tV+W0PzJOlwo8YmO6fNzaB1CrMVYd1V+2TURF6lbCbmZKqMsYgeQfPVvqiM3zbNSJPhFEnmlEXIogH2Vq7PQ==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
     hasBin: true
     dev: false
@@ -310,12 +310,13 @@ packages:
       '@toml-tools/lexer': 0.3.5
       '@toml-tools/parser': 0.3.5
       prettier: 2.8.8
-    dev: false
+    dev: true
 
   /prettier@2.8.8:
     resolution: {integrity: sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==}
     engines: {node: '>=10.13.0'}
     hasBin: true
+    dev: true
 
   /pug-error@2.0.0:
     resolution: {integrity: sha512-sjiUsi9M4RAGHktC1drQfCr5C5eriu24Lfbt4s+7SykztEOwVZtbFk1RRq0tzLxcMxMYTBR+zMQaG07J/btayQ==}
@@ -331,7 +332,7 @@ packages:
 
   /regexp-to-ast@0.4.0:
     resolution: {integrity: sha512-4qf/7IsIKfSNHQXSwial1IFmfM1Cc/whNBQqRwe0V2stPe7KmN1U0tWQiIx6JiirgSrisjE0eECdNf7Tav1Ntw==}
-    dev: false
+    dev: true
 
   /regexp-to-ast@0.5.0:
     resolution: {integrity: sha512-tlbJqcMHnPKI9zSrystikWKwHkBqu2a/Sgw01h3zFjvYrMxEDYHzzoMZnUrbIfpTFEsoRnnviOXNCzFiSc54Qw==}
