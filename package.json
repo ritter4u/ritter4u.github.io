@@ -1,4 +1,17 @@
 {
+  "comments": {
+    "dependencies": {
+      "npm": "project"
+    },
+    "devDependencies": {
+      "@prettier/plugin-php": "project",
+      "@prettier/plugin-pug": "project",
+      "@prettier/plugin-ruby": "project",
+      "@prettier/plugin-xml": "project",
+      "prettier": "project",
+      "prettier-plugin-toml": "project"
+    }
+  },
   "dependencies": {
     "npm": "^9.9.2"
   },
