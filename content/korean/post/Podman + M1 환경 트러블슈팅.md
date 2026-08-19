@@ -1,5 +1,4 @@
 ---
-author: Keunreol Park
 title: "Podman + M1 환경 트러블슈팅"
 date: 2026-03-04
 description: "Apple Silicon(M1)에서 Podman 사용 시 자주 만나는 이슈와 해결 절차"

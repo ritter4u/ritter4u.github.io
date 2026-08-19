@@ -1,5 +1,4 @@
 ---
-author: Keunreol Park
 title: "MyBatis mapUnderscoreToCamelCase 실제 문제 사례"
 date: 2026-03-04
 description: "mapUnderscoreToCamelCase 설정이 있어도 매핑이 실패하는 실제 패턴과 대응법"

@@ -1,5 +1,4 @@
 ---
-author: Keunreol Park
 title: "Tomcat 10.1 Jakarta 마이그레이션 이슈"
 date: 2026-03-04
 description: "Tomcat 9 -> 10.1 전환 시 javax에서 jakarta로 옮길 때 발생하는 대표 장애 정리"

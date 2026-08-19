@@ -1,5 +1,4 @@
 ---
-author: Keunreol Park
 title: "Xdebug in VSCode with Docker"
 date: 2022-09-30T14:31:09+09:00
 description: "Docker 컨테이너 내부 PHP를 VSCode Xdebug로 디버깅하는 실전 설정"

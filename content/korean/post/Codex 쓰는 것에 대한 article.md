@@ -1,5 +1,4 @@
 ---
-author: Keunreol Park
 title: "Codex 쓰는 것에 대한 article"
 date: 2026-03-04
 description: "Codex를 실무에서 효율적으로 사용하는 요청 방식과 작업 루틴"

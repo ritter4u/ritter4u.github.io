@@ -1,5 +1,4 @@
 ---
-author: Keunreol Park
 title: "Spring Boot 3 + Keycloak realm role 설정"
 date: 2026-03-04
 description: "Spring Security 6에서 Keycloak realm role을 안정적으로 권한 매핑하는 방법"

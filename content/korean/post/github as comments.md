@@ -5,7 +5,6 @@ type: "post"
 layout: "post"
 tags: ["github", "Hugo"]
 description: ""
-author: "Keunreol Park"
 draft: true
 ---
 

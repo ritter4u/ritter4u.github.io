@@ -1,5 +1,4 @@
 ---
-author: Keunreol Park
 title: "Understanding Onion Architecture"
 date: 2022-09-25
 description: "Onion Architecture의 핵심 원칙, 레이어 구성, 장단점을 실무 관점에서 정리"
