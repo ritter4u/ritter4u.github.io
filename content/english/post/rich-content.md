@@ -24,7 +24,7 @@ Hugo ships with several [Built-in Shortcodes](https://gohugo.io/content-manageme
 ## Twitter Simple Shortcode
 
 
-{{< tweet user="SanDiegoZoo" id="1453110110599868418" >}}
+[San Diego Zoo post](https://twitter.com/SanDiegoZoo/status/1453110110599868418)
 
 <br>
 
@@ -32,4 +32,4 @@ Hugo ships with several [Built-in Shortcodes](https://gohugo.io/content-manageme
 
 ## Vimeo Simple Shortcode
 
-{{< vimeo_simple 48912912 >}}
+[Vimeo video](https://vimeo.com/48912912)

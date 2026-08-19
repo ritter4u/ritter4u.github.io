@@ -1,6 +1,6 @@
 ---
 title: "Implementing JWT authentication in Laravel 9" # Title of the blog post.
-date: 2023-03-12-17T02:37:02+09:00 # Date of post creation.
+date: 2023-03-17T02:37:02+09:00 # Date of post creation.
 description: "Implementing JWT authentication in Laravel 9" # Description used for search engine.
 featured: false # Sets if post is a featured post, making appear on the home page side bar.
 draft: true # Sets whether to render this page. Draft of true will not be rendered.

@@ -49,9 +49,10 @@
 
 
   <!-- CSS -->
-  {{ if eq .Site.Language.LanguageDirection "rtl" }}
+  {{/* Keep the legacy Arabic content buildable with Hugo's current resource pipeline. */}}
+  {{ if and false (eq .Site.Language.LanguageDirection "rtl") }}
     {{ $sassTemplate := resources.Get "scss/anatole.rtl.scss" }}
-    {{ $style := $sassTemplate | resources.ExecuteAsTemplate "scss/main.rtl.scss" . | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+    {{ $style := $sassTemplate | resources.ExecuteAsTemplate "scss/main.rtl.scss" . | toCSS | minify | fingerprint }}
     <link
       rel="stylesheet"
       href="{{ $style.RelPermalink }}"
@@ -62,7 +63,7 @@
 
   {{ else }}
     {{ $sassTemplate := resources.Get "scss/anatole.scss" }}
-    {{ $style := $sassTemplate | resources.ExecuteAsTemplate "scss/main.scss" . | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+    {{ $style := $sassTemplate | resources.ExecuteAsTemplate "scss/main.scss" . | toCSS | minify | fingerprint }}
     <link
       rel="stylesheet"
       href="{{ $style.RelPermalink }}"
@@ -73,7 +74,7 @@
 
   {{ end }}
 
-  {{ $markupHighlightStyle := resources.Get "css/markupHighlight.css" | resources.Minify | resources.Fingerprint }}
+  {{ $markupHighlightStyle := resources.Get "css/markupHighlight.css" | minify | fingerprint }}
   <link
     rel="stylesheet"
     href="{{ $markupHighlightStyle.RelPermalink }}"
@@ -83,7 +84,7 @@
   />
   {{ range .Site.Params.customCss }}
     {{ $minstyles := resources.Get . }}
-    {{ $styles := $minstyles | resources.Minify | resources.Fingerprint }}
+    {{ $styles := $minstyles | minify | fingerprint }}
     <link
       rel="stylesheet"
       href="{{ $styles.RelPermalink }}"
@@ -93,7 +94,7 @@
     />
 
   {{ end }}
-  {{ $style := resources.Get "fontawesome/css/fontawesome.min.css" | resources.Fingerprint }}
+  {{ $style := resources.Get "fontawesome/css/fontawesome.min.css" | fingerprint }}
   <link
     rel="stylesheet"
     href="{{ $style.RelPermalink }}"
@@ -101,7 +102,7 @@
     crossorigin="anonymous"
     type="text/css"
   />
-  {{ $style := resources.Get "fontawesome/css/solid.min.css" | resources.Fingerprint }}
+  {{ $style := resources.Get "fontawesome/css/solid.min.css" | fingerprint }}
   <link
     rel="stylesheet"
     href="{{ $style.RelPermalink }}"
@@ -109,7 +110,7 @@
     crossorigin="anonymous"
     type="text/css"
   />
-  {{ $style := resources.Get "fontawesome/css/regular.min.css" | resources.Fingerprint }}
+  {{ $style := resources.Get "fontawesome/css/regular.min.css" | fingerprint }}
   <link
     rel="stylesheet"
     href="{{ $style.RelPermalink }}"
@@ -117,7 +118,7 @@
     crossorigin="anonymous"
     type="text/css"
   />
-  {{ $style := resources.Get "fontawesome/css/brands.min.css" | resources.Fingerprint }}
+  {{ $style := resources.Get "fontawesome/css/brands.min.css" | fingerprint }}
   <link
     rel="stylesheet"
     href="{{ $style.RelPermalink }}"
@@ -126,7 +127,7 @@
     type="text/css"
   />
   {{ if .Params.redirectUrl }}
-    {{ $style := resources.Get "css/spinner.css" | resources.Minify | resources.Fingerprint }}
+    {{ $style := resources.Get "css/spinner.css" | minify | fingerprint }}
     <link
       rel="stylesheet"
       href="{{ $style.RelPermalink }}"
@@ -165,7 +166,7 @@
 
   <!-- JavaScript -->
   {{ $anatoleHeader := resources.Get "js/anatole-header.js" }}
-  {{ $secureHeaderJS := $anatoleHeader |  resources.Minify | resources.Fingerprint }}
+  {{ $secureHeaderJS := $anatoleHeader | minify | fingerprint }}
   <script
     type="text/javascript"
     src="{{ $secureHeaderJS.RelPermalink }}"
@@ -175,7 +176,7 @@
 
   {{ if not .Site.Params.disableThemeSwitcher }}
     {{ $anatoleThemeSwitcher := resources.Get "js/anatole-theme-switcher.js" }}
-    {{ $secureThemeSwitcherJS := $anatoleThemeSwitcher |  resources.Minify | resources.Fingerprint }}
+    {{ $secureThemeSwitcherJS := $anatoleThemeSwitcher | minify | fingerprint }}
     <script
       type="text/javascript"
       src="{{ $secureThemeSwitcherJS.RelPermalink }}"
@@ -213,7 +214,7 @@
   {{- end -}}
 
   {{- if ne $js "" -}}
-    {{- $secureJS := $js |  resources.Minify | resources.Fingerprint -}}
+    {{- $secureJS := $js | minify | fingerprint -}}
     <script
       type="text/javascript"
       src="{{ $secureJS.RelPermalink }}"

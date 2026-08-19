@@ -18,7 +18,6 @@ tags:
   - Tag_name1
   - Tag_name2
 # comment: false # Disable comment if false.
-draft : true
 ---
 
 aaa

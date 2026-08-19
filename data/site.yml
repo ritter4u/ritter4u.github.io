@@ -1,0 +1,24 @@
+kris:
+  projects:
+    - title: "EBS AI펭톡"
+      label: "교육 플랫폼"
+      description: "학생·교사·학습관리 영역을 연결하는 API와 운영의 구조를 다룹니다."
+    - title: "LCMS 배치"
+      label: "데이터 · 운영"
+      description: "대용량 학습데이터, 배치 처리, 정합성과 복구를 설계합니다."
+    - title: "CloudHospital"
+      label: "의료 · 클라우드"
+      description: "의료 서비스의 API와 클라우드 환경을 안정적으로 이어 붙입니다."
+    - title: "작업을 남기는 도구"
+      label: "자동화 · 지식"
+      description: "Codex, Dropbox, Knowledge를 연결해 반복되는 일을 다시 쓸 수 있게 만듭니다."
+valen:
+  interests:
+    - title: "여행"
+      description: "장소의 정보와 실제 경험, 함께 걷는 사람의 조건을 한 장면으로 봅니다."
+    - title: "전자책"
+      description: "읽기와 서지, Calibre와 번역을 오래 남는 개인 아카이브로 엮습니다."
+    - title: "돌과 광석"
+      description: "이름과 모양, 관찰과 해석이 어떻게 달라지는지 천천히 살핍니다."
+    - title: "음악과 이야기"
+      description: "오페라·클래식부터 영화와 세계관까지, 마음에 남은 관계를 기록합니다."

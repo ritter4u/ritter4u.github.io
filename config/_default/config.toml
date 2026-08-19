@@ -1,7 +1,7 @@
-baseURL = "https://ritter4u.github.io"
+baseURL = "https://tine.im"
 languageCode = "ko"
 DefaultContentLanguage = "ko"
-title = "Website of Jane Doe"
+title = "tine.im — two ways in"
 # theme as hugo module
 #theme = "github.com/lxndrblz/anatole"
 # theme as git submodule
