@@ -15,12 +15,6 @@ url = "/post/"
 # weight = 300
 # identifier = "portfolio"
 # url = "/portfolio/"
-[[main]]
-name = "About"
-weight = 400
-identifier = "about"
-url = "/about/"
-
 # [[main]]
 # name = "Accomplishments"
 # weight = 500

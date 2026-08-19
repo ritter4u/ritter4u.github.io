@@ -11,12 +11,6 @@ identifier = "posts"
 url = "/ar/post/"
 
 [[main]]
-name = "حول"
-weight = 300
-identifier = "about"
-url = "/ar/about/"
-
-[[main]]
 name = "للتواصل"
 weight = 400
 identifier = "contact"
