@@ -48,7 +48,7 @@ https://themes.gohugo.io/
 
 ![action log](/images/guthub_action_log.png)
 
-<!-- https://github.com/ritter4u/ritter4u.github.io/actions -->
+<!-- https://github.com/kris-atelier/ritter4u.github.io/actions -->
 
 # 라이브에서 확인
 
