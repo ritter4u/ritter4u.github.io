@@ -15,7 +15,7 @@
       .panel--valen { background: #c74634; }
       .panel--kris { background: #285a9f; }
       .panel__center { align-items: center; display: flex; flex-direction: column; gap: 1.25rem; justify-content: center; text-align: center; }
-      .panel__cat { font-size: clamp(2.8rem, 7vw, 5rem); line-height: 1; }
+      .panel__emblem { display: block; height: clamp(4.5rem, 12vw, 8rem); width: clamp(4.5rem, 12vw, 8rem); }
       .panel__domain { color: rgba(255, 255, 255, 0.92); font-size: clamp(0.68rem, 1.2vw, 0.86rem); letter-spacing: 0.18em; line-height: 1.4; text-indent: 0.18em; }
       @media (max-width: 640px) { .entry { flex-direction: column; } .panel { min-height: 50vh; } }
       [data-host="valen"] .panel--kris, [data-host="kris"] .panel--valen { display: none; }
@@ -23,8 +23,8 @@
   </head>
   <body>
     <main class="entry">
-      <section class="panel panel--valen" aria-label="valen.tine"><div class="panel__center"><div class="panel__cat" aria-hidden="true">🐈</div><div class="panel__domain">valen.tine.im</div></div></section>
-      <section class="panel panel--kris" aria-label="kris.tine"><div class="panel__center"><div class="panel__cat" aria-hidden="true">🐈</div><div class="panel__domain">kris.tine.im</div></div></section>
+      <section class="panel panel--valen" aria-label="valen.tine"><div class="panel__center"><img class="panel__emblem" src="/images/Imperial_Seal_of_the_Korean_Empire.svg" alt="" /><div class="panel__domain">valen.tine.im</div></div></section>
+      <section class="panel panel--kris" aria-label="kris.tine"><div class="panel__center"><img class="panel__emblem" src="/images/Imperial_Seal_of_the_Korean_Empire.svg" alt="" /><div class="panel__domain">kris.tine.im</div></div></section>
     </main>
     <script>
       const host = window.location.hostname.toLowerCase();
